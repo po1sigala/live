@@ -5,7 +5,7 @@ const data = require('./models/data');
 const app = express();
 const port = 3001;
 
-const connectionStringURI = `mongodb://localhost:27017/groceryListDB`;
+const connectionStringURI = `mongodb://127.0.0.1:27017/groceryListDB`;
 
 let db;
 

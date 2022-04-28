@@ -4,13 +4,13 @@ MongoDB Compass is the GUI for MongoDB and is a great way to explore a database 
 
 * With a MongoDB server installed locally and running, open Compass on your local machine to do the following:
 
-  * 🔑 To work with our local MongoDB server, we first have to make a connection. By default, the local MongoDB instance runs on localhost with default port `27017`. We will use the default connection at `localhost:27017` to connect to Compass.  
+  * 🔑 To work with our local MongoDB server, we first have to make a connection. By default, the local MongoDB instance runs on localhost with default port `27017`. We will use the default connection at `127.0.0.1:27017` to connect to Compass.  
 
   * Click on the `Connect` button under `New Connection` at the center of the screen.
   
   > Note: You do not need to paste a connection string in the text box since you are using the default setting. Simply click on the `Connect` button and proceed to the next screen.
 
-  * At the top left of the Local screen under `host`, we see that a successful connection to the default `localhost:27017` has been made. 
+  * At the top left of the Local screen under `host`, we see that a successful connection to the default `127.0.0.1:27017` has been made. 
 
   * The built-in MongoDB shell is located on the bottom left of the Local screen. Click on `MONGOSH` to open a new MongoDB shell.
 
