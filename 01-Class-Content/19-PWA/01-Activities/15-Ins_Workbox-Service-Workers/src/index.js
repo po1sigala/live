@@ -21,7 +21,7 @@ moduleContent.innerHTML = `<div class="container">
          like caching files, handling network requests when your connection goes offline.</p>
       </div>
       <div class="card-action">
-        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API#service_worker_concepts_and_usage">Read More</a>
+        <a id="card-link" href="https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API#service_worker_concepts_and_usage">Read More</a>
       </div>
     </div>
   </div>
