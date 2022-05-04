@@ -35,9 +35,7 @@ export const StudentProvider = ({ children }) => {
   // Function to remove a student
   const removeStudent = (id) => {
     // Copy the content of the students array into our new list with the spread operator, then filter out the student that matches the `id` that was passed
-    const newStudentsList = [
-      ...students.filter((student) => student.id !== id),
-    ];
+    const newStudentsList = students.filter((student) => student.id !== id);
 
     // Update state with the new list after the student has been removed
     setStudents(newStudentsList);
