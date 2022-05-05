@@ -34,9 +34,7 @@ export const StudentProvider = ({ children }) => {
 
   // Function to remove a student
   const removeStudent = (id) => {
-    const newStudentsList = [
-      ...students.filter((student) => student.id !== id),
-    ];
+    const newStudentsList = students.filter((student) => student.id !== id);
 
     setStudents(newStudentsList);
   };

@@ -1229,9 +1229,7 @@ In this class, students will be introduced to complex state management within th
     };
 
     const removeStudent = (id) => {
-      const newStudentsList = [
-        ...students.filter((student) => student.id !== id),
-      ];
+      const newStudentsList = students.filter((student) => student.id !== id);
 
       setStudents(newStudentsList);
     };
