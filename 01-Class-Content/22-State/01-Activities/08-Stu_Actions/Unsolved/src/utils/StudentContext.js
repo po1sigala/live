@@ -23,7 +23,17 @@ export const StudentProvider = ({ children }) => {
 
   // Function to add a student
   const addStudent = (student) => {
-    const id = students.length + 1;
+    let id;
+
+    if (students.length) {
+      const ids = students.map((s) => s.id);
+
+      ids.sort((a, b) => a - b);
+
+      id = ids[ids.length - 1] + 1;
+    } else {
+      id = 1;
+    }
 
     // We use the spread operator to fill in the details from the student object that was passed while adding the new `id`
     const newStudent = { ...student, id };
