@@ -15,7 +15,17 @@ export default function reducer(state, action) {
   switch (action.type) {
     case ADD_STUDENT: {
       // Grab the last student's id from the array of students and add one to it.
-      const newStudentId = state.students[state.students.length - 1].id + 1;
+      let newStudentId;
+
+      if (state.students.length) {
+        const studentIds = state.students.map((s) => s.id);
+
+        studentIds.sort((a, b) => a - b);
+
+        newStudentId = studentIds[studentIds.length - 1] + 1;
+      } else {
+        newStudentId = 1;
+      }
 
       // Take a copy of the new student's data and add an id to it
       const newStudent = { ...action.payload, id: newStudentId };
