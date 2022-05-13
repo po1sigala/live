@@ -20,7 +20,7 @@ mongodb.connect(
       if (err) {
         return console.log(err);
       }
-      console.log(res.ops);
+      console.log(res);
     });
 
     app.listen(port, () => {

@@ -26,7 +26,17 @@ export const StudentProvider = ({ children }) => {
     if (!student.name) {
       return;
     }
-    const id = students.length + 1;
+    let id;
+
+    if (students.length) {
+      const ids = students.map((s) => s.id);
+
+      ids.sort((a, b) => a - b);
+
+      id = ids[ids.length - 1] + 1;
+    } else {
+      id = 1;
+    }
 
     const newStudent = { ...student, id };
 
@@ -35,9 +45,7 @@ export const StudentProvider = ({ children }) => {
 
   // Function to remove a student
   const removeStudent = (id) => {
-    const newStudentsList = [
-      ...students.filter((student) => student.id !== id),
-    ];
+    const newStudentsList = students.filter((student) => student.id !== id);
 
     setStudents(newStudentsList);
   };

@@ -355,9 +355,9 @@ In today's class, students will be introduced to the Sequelize ORM. Working with
   * 🔑 We created a `.env` file to store the environment variables, as follows:
 
     ```text
-    DB_NAME=library_db
-    DB_PASSWORD=
-    DB_USER=
+    DB_NAME='library_db'
+    DB_USER=''
+    DB_PASSWORD=''
     ```
 
 * Fill in your credentials and rename the `.env.EXAMPLE` file to `.env` while explaining the following:
