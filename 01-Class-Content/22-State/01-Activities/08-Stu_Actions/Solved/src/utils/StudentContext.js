@@ -23,7 +23,17 @@ export const StudentProvider = ({ children }) => {
 
   // Function to add a student
   const addStudent = (student) => {
-    const id = students.length + 1;
+    let id;
+
+    if (students.length) {
+      const ids = students.map((s) => s.id);
+
+      ids.sort((a, b) => a - b);
+
+      id = ids[ids.length - 1] + 1;
+    } else {
+      id = 1;
+    }
 
     // We use the spread operator to fill in the details from the student object that was passed while adding the new `id`
     const newStudent = { ...student, id };
@@ -35,9 +45,7 @@ export const StudentProvider = ({ children }) => {
   // Function to remove a student
   const removeStudent = (id) => {
     // Copy the content of the students array into our new list with the spread operator, then filter out the student that matches the `id` that was passed
-    const newStudentsList = [
-      ...students.filter((student) => student.id !== id),
-    ];
+    const newStudentsList = students.filter((student) => student.id !== id);
 
     // Update state with the new list after the student has been removed
     setStudents(newStudentsList);
