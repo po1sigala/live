@@ -58,7 +58,7 @@ Instead of creating a repository, you’ll publish a GitHub gist. GitHub describ
 
 After you’ve downloaded the starter code, learn [how to create a gist](https://help.github.com/en/github/writing-on-github/creating-gists). You can also watch this [video on how to use gists](https://www.youtube.com/watch?v=wc2NlcWjQHw).
 
-> **Note**: Make sure to create a **public** gist.
+> **Important**: Make sure to create a **public** gist and add the `.md` file extension to the file name so that your Markdown renders correctly.
 
 The starter code is a template with a title, introductory paragraph, summary, and table of contents. The table of contents should link to sections of the tutorial that describe the functionality of each component in the regex. Be sure to rename the template to a unique name that describes your tutorial.
 
@@ -86,7 +86,7 @@ This Challenge is graded based on the following criteria:
 
 * A valid URL of your GitHub gist.
 
-* Your GitHub gist that contains the tutorial Markdown.
+* Your GitHub gist that contains the tutorial Markdown. Your gist must include the `.md` file extension so that your Markdown renders correctly.
 
 ### Technical Acceptance Criteria: 50%
 
