@@ -1,8 +1,8 @@
-# Full Stack Part-Time Lesson Plans
+# Full-Stack Part-Time Weekend Lesson Plans
 
 ## Challenge 
 
-For part-time students, each Challenge is assigned on the first day of the week (or module if the calendar is shifted by a holiday or event) and is due _the following_ Saturday, so students have nearly two weeks to submit.
+For Part-Time Weekend students, each Challenge is assigned on the first day of the week (or module if the calendar is shifted by a holiday or event) and is due _the following_ Saturday, so students have nearly two weeks to submit.
 
 **Note**: The following are default days of the week that Challenges are assigned/due in BCS and are subject to change with holidays.
 
