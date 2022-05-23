@@ -50,7 +50,7 @@ var getDay = function (dayNum){
 
 ```
 
-* This one may have seem trivial to students but it's a great opportunity to discuss `switch` statements.
+* This one may seem trivial to students but it's a great opportunity to discuss `switch` statements.
 
 * Be sure to cover the `switch` syntax and point out how clean and readable it is compared to an if/else. 
 

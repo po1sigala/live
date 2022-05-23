@@ -1,18 +1,18 @@
-# Full Stack Part-Time Lesson Plans
+# Full-Stack Part-Time Weekday Lesson Plans
 
 ## Challenge 
 
-For part-time students, each Challenge is assigned on the first day of the week (or module if the calendar is shifted by a holiday or event) and is due _the following_ Saturday, so students have nearly two weeks to submit.
+For Part-Time Weekday students, each Challenge is assigned on the first day of the week (or module if the calendar is shifted by a holiday or event) and is due on the last class day of _the following_ week, so students have nearly two weeks to submit.
 
 **Note**: The following are default days of the week that Challenges are assigned/due in BCS and are subject to change with holidays.
 
-### Monday/Tuesday - After Class
+### Monday - After Class
 
 **Note**: Students receive Challenge instructions and starter code in Canvas, but you may want to add them to the class repo as well.
 
 * Copy the new Challenge instructions and, if applicable, the starter code inside the `Develop` folder into the class repo.
 
-### Saturday of the Following Week - After Class
+### Thursday of the Following Week - After Class
 
 **Note**: Students do not receive solution code in Canvas.
 

@@ -8,7 +8,7 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
 ## Instructor/TA Notes
 
-* In this module, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to the [Full-Stack Blog on how to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
+* In this module, students will deploy their web applications using Heroku's command-line interface (CLI). Be sure to have students create a Heroku account and install the CLI before class. For more guidance, they can refer to [How to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli).
 
 * We will use Insomnia to make HTTP requests to Express.js routes. Be sure to have students [install Insomnia](https://insomnia.rest/download) before class.
 
@@ -35,7 +35,7 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 * [11.1 Lesson Plan](./01-Day_Express-Starter/11.1-LESSON-PLAN.md)
 
 * [11.2 Lesson Plan](./02-Day_POST-Persistent-Data/11.2-LESSON_PLAN.md)
-
+  
 * [11.3 Lesson Plan](./03-Day_Router-Middleware-Heroku/11.3-LESSON-PLAN.md)
 
 ### Challenge
