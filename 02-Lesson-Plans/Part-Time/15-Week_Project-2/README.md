@@ -2,7 +2,7 @@
 
 ## Overview
 
-In this module, students will begin work on their second project of the Boot Camp -- a full-stack application which connects a robust back-end with servers, databases, advanced APIs, and user authentication to an intuitive front end.
+In this module, students will begin work on their second project of the Boot Camp--a full-stack application which connects a robust back-end with servers, databases, advanced APIs, and user authentication to an intuitive front end.
 
 Review this module's Roadmap in Canvas for detailed information on key topics, learning objectives, and this module's group project.
 

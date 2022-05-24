@@ -84,13 +84,13 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
 ### Algorithms
 
-* [01: Maximum Continuous Sub-Array](./../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray/)
+* [01: Maximum Continuous Sub-Array](./../../../01-Class-Content/20-React/03-Algorithms/01-maximum-continuous-subarray/README.md)
 
-* [02: Merge Meeting Times](./../../../01-Class-Content/20-React/03-Algorithms/02-merge-meeting-times/)
+* [02: Merge Meeting Times](./../../../01-Class-Content/20-React/03-Algorithms/02-merge-meeting-times/README.md)
 
-  * 📹 [Let's Code Merge Meeting Times!](https://2u-20.wistia.com/medias/rsyvzd1cxl)
+   * 📹 [Let's Code Merge Meeting Times!](https://2u-20.wistia.com/medias/rsyvzd1cxl)
 
-* [03: Int to Roman Numeral](./../../../01-Class-Content/20-React/03-Algorithms/03-int-to-roman/)
+* [03: Int to Roman Numeral](./../../../01-Class-Content/20-React/03-Algorithms/03-int-to-roman/README.md)
 
 ### Resources
 
