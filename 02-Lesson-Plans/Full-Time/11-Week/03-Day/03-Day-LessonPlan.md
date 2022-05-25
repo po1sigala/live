@@ -1467,17 +1467,7 @@ In this class, students will be introduced to complex state management within th
 
     ```js
     case ADD_STUDENT: {
-        let newStudentId;
-
-        if (state.students.length) {
-          const studentIds = state.students.map((s) => s.id);
-
-          studentIds.sort((a, b) => a - b);
-
-          newStudentId = studentIds[studentIds.length - 1] + 1;
-        } else {
-          newStudentId = 1;
-        }
+        const newStudentId = createId(state.students);
         
         const newStudent = { ...action.payload, id: newStudentId };
 
