@@ -116,6 +116,8 @@ Module 14:
 
 * [ESLint configuration user guide](https://eslint.org/docs/user-guide/configuring)
 
+* [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
+
 * [Sequelize documentation](https://sequelize.org/master/)
 
 * [Handlebars.js](https://handlebarsjs.com/)

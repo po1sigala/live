@@ -72,5 +72,7 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
 * [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2)
 
+* [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
+
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

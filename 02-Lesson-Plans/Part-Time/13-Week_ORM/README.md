@@ -74,5 +74,7 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
 * [ESLint configuration user guide](https://eslint.org/docs/user-guide/configuring)
 
+* [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
+
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

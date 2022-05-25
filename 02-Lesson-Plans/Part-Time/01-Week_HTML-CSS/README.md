@@ -78,6 +78,8 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
 * [MDN Web Docs on HTML attributes](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes)
 
+* [HTML Cheatsheet](https://coding-boot-camp.github.io/full-stack/html/html-cheatsheet)
+
 * [MDN Web Docs on CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
 * [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)

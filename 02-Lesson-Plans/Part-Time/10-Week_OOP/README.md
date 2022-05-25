@@ -76,7 +76,9 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
   * [Method overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) 
 
-  * [git stash](https://www.git-scm.com/docs/git-stash) 
+  * [git stash](https://www.git-scm.com/docs/git-stash)
+
+  * [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

@@ -78,6 +78,8 @@ Refer to the documentation:
 
 * [MDN Web Docs on the figure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 
+* [Full-Stack Blog HTML Cheatsheet](https://coding-boot-camp.github.io/full-stack/html/html-cheatsheet)
+
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your group to further your knowledge:

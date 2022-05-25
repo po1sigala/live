@@ -68,6 +68,8 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
 * [inquirer documentation](https://www.npmjs.com/package/inquirer/v/0.2.3)
 
+* [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
+
 ---
 
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
