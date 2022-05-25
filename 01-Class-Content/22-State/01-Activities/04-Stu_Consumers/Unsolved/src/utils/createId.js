@@ -5,7 +5,7 @@ const createId = (arr) => {
 
   // If there are any entries in the array already
   if (arr.length) {
-    // Create array of all ids currently assigned
+    // Create array of all ids currently assigned to each entry
     const ids = arr.map((e) => e.id);
 
     // Sort array so that highest ID is last
