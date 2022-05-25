@@ -1,9 +1,9 @@
-const randomNum = () => Math.floor(Math.random() * 20);
+import createId from './createId';
 
 export const reducer = (state, action) => {
   switch (action.type) {
     case 'ADD_CAR': {
-      const newID = randomNum();
+      const newID = createId(state.cars);
       const newCar = { ...action.payload, id: newID };
 
       return {

@@ -1,9 +1,10 @@
-import { ADD_CAR, START_CAR, STOP_CAR } from '../utils/actions';
+import { ADD_CAR, START_CAR, STOP_CAR } from './actions';
+import createId from './createId';
 
 export default function reducer(state, action) {
   switch (action.type) {
     case ADD_CAR: {
-      const newCarId = state.cars[state.cars.length - 1].id + 1;
+      const newCarId = createId(state.cars);
       const newCar = { ...action.payload, id: newCarId };
 
       return {
