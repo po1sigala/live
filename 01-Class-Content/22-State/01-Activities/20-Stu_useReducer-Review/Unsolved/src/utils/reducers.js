@@ -13,6 +13,7 @@ export default function reducer(state, action) {
   // Depending on the action we create a new version of state after the desired action is preformed
   switch (action.type) {
     case ADD_STUDENT: {
+      // Generate a unique id for this student
       const newStudentId = createId(state.students);
 
       // Take a copy of the new student's data and add an id to it

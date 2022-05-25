@@ -1,8 +1,8 @@
-const createId = (students) => {
+const createId = (arr) => {
   let id;
 
-  if (students.length) {
-    const ids = students.map((s) => s.id);
+  if (arr.length) {
+    const ids = arr.map((e) => e.id);
 
     ids.sort((a, b) => a - b);
 
