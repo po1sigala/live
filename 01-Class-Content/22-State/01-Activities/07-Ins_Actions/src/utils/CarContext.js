@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import createId from './createId';
 
 // Create our theme context using React.CreateContext()
 export const CarContext = React.createContext();
@@ -6,20 +7,19 @@ export const CarContext = React.createContext();
 // Create a custom hook that allows easy access to our ThemeContext values
 export const useCar = () => useContext(CarContext);
 
-const randomNum = () => Math.floor(Math.random() * 20000);
 
 // Creating our theme provider. Accepts an argument of "props", here we plucking off the "children" object.
 export default function CarProvider({ children }) {
   const [cars, setCars] = useState([
     {
-      id: randomNum(),
+      id: 1,
       make: 'Honda',
       model: 'Civic',
       year: '2008',
       isRunning: false,
     },
     {
-      id: randomNum(),
+      id: 2,
       make: 'Tesla',
       model: 'Y',
       year: '2021',
@@ -28,7 +28,7 @@ export default function CarProvider({ children }) {
   ]);
 
   const addCar = (car) => {
-    const newID = randomNum();
+    const newID = createId(cars);
     const newCar = { ...car, id: newID };
 
     setCars([...cars, newCar]);
