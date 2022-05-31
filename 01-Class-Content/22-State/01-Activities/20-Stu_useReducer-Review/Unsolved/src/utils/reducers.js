@@ -6,24 +6,15 @@ import {
   ADD_MAJOR,
   REMOVE_MAJOR,
 } from './actions';
+import createId from './createId';
 
 // Create a function that will handle combining two objects. Accepts state and an action as an argument.
 export default function reducer(state, action) {
   // Depending on the action we create a new version of state after the desired action is preformed
   switch (action.type) {
     case ADD_STUDENT: {
-      // Grab the last student's id from the array of students and add one to it.
-      let newStudentId;
-
-      if (state.students.length) {
-        const studentIds = state.students.map((s) => s.id);
-
-        studentIds.sort((a, b) => a - b);
-
-        newStudentId = studentIds[studentIds.length - 1] + 1;
-      } else {
-        newStudentId = 1;
-      }
+      // Generate a unique id for this student
+      const newStudentId = createId(state.students);
 
       // Take a copy of the new student's data and add an id to it
       const newStudent = { ...action.payload, id: newStudentId };

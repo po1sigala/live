@@ -5,23 +5,14 @@ import {
   ADD_MAJOR,
   REMOVE_MAJOR,
 } from './actions';
+import createId from './createId';
 
 // TODO: Add a comment explaining what a reducer is
 // Your comment here
 export default function reducer(state, action) {
   switch (action.type) {
     case ADD_STUDENT: {
-      let newStudentId;
-
-      if (state.students.length) {
-        const studentIds = state.students.map((s) => s.id);
-
-        studentIds.sort((a, b) => a - b);
-
-        newStudentId = studentIds[studentIds.length - 1] + 1;
-      } else {
-        newStudentId = 1;
-      }
+      const newStudentId = createId(state.students);
 
       const newStudent = { ...action.payload, id: newStudentId };
 

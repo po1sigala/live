@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import createId from './createId';
 
 const StudentContext = createContext();
 
@@ -25,17 +26,7 @@ export const StudentProvider = ({ children }) => {
     if (!student.name) {
       return;
     }
-    let id;
-
-    if (students.length) {
-      const ids = students.map((s) => s.id);
-
-      ids.sort((a, b) => a - b);
-
-      id = ids[ids.length - 1] + 1;
-    } else {
-      id = 1;
-    }
+    const id = createId(students);
 
     const newStudent = { ...student, id };
 
