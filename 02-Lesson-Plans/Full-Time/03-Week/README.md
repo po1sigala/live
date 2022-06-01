@@ -98,7 +98,7 @@ Module 06:
 
 * [jQuery Event Delegation](https://learn.jquery.com/events/event-delegation/)
 
-* [Bootstrap Docs](https://getbootstrap.com)
+* [Bootstrap Docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 * [Google Fonts Docs](https://fonts.google.com)
 
