@@ -10,7 +10,9 @@ This class introduces Bootstrap utilities and how to extend Bootstrap. Student's
 
 * The `26-Stu_Moment-Format` activity uses the `Moment.js` library to format dates and time. Let the students know that `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. It is still functional, which is why we are covering it in class. Feel free to encourage students to explore other options such as [Luxon](https://moment.github.io/luxon/), [Day.js](https://day.js.org/), [date-fns](https://date-fns.org/), and [js-Joda](https://js-joda.github.io/js-joda/).
 
-* Take a few minutes before class to get familiar with both the [Bootstrap](https://getbootstrap.com/) and [Google Fonts](https://fonts.google.com/) documentation, as students will rely heavily on these resources in class and might need a nudge in finding answers.
+* Take a few minutes before class to get familiar with both the [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) and [Google Fonts](https://fonts.google.com/) documentation, as students will rely heavily on these resources in class and might need a nudge in finding answers.
+
+* **Important**: Our curriculum currently uses Bootstrap v4.5! Please refer to the Bootstrap v4.5 [documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/) instead of `https://getbootstrap.com` as that will navigate to version 5+.
 
 * Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students might have.
 

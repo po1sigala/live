@@ -10,7 +10,7 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
 * Expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to use the syntax as is.
 
-* Take a few minutes before class to get familiar with the [Bootstrap documentation](https://getbootstrap.com) and the [Google Fonts documentation](https://fonts.google.com), as students will rely heavily on both resources in class and may need a nudge in finding answers.
+* Take a few minutes before class to get familiar with the [Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/) and the [Google Fonts documentation](https://fonts.google.com), as students will rely heavily on both resources in class and may need a nudge in finding answers.
 
 * 05.3 lesson plan includes an activity that involves the `Moment.js` library. `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. We will still use it in this module, but feel free to refer the students to other libraries, such as:
 
@@ -72,7 +72,7 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
 * [jQuery Event Delegation](https://learn.jquery.com/events/event-delegation/)
 
-* [Bootstrap Docs](https://getbootstrap.com)
+* [Bootstrap Docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
 
 * [Google Fonts Docs](https://fonts.google.com)
 
