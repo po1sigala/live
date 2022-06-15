@@ -1,8 +1,8 @@
 # Insomnia Demo
 
-* Open Insomnia and click the `+` sign, then click `New Request`. You can also do this using the keyboard shortcut `Command + N` or `Ctrl + N`.
+* In this activity, students will write and test Express.js routes using Insomnia. Direct students to the [Insomnia download page](https://insomnia.rest/download) and have them download the app then, navigate to the [Insomnia docs](https://docs.insomnia.rest/insomnia/get-started).
 
-* In the Insomnia interface, change the HTTP method to `GET` and enter in the endpoint for GitHub:  `https://api.github.com/repos/microsoft/vscode/pulls?state=open`
+* Next, in the Insomnia interface, change the HTTP method to `GET` and enter in the endpoint for GitHub:  `https://api.github.com/repos/microsoft/vscode/pulls?state=open`
 
 * Let's take a look at the different parts of this URI.
 
