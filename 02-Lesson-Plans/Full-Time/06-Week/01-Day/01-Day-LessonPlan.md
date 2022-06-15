@@ -1294,7 +1294,7 @@ In this lesson, students will learn how to create an API, define the routes, per
     ```md
     # Insomnia Demo
 
-    * Use the [Insomnia Docs](https://docs.insomnia.rest/insomnia/get-started) to get started.
+    * Open Insomnia and create a new Request. If you're not familiar with Insomnia, refer to the the [Insomnia Docs](https://docs.insomnia.rest/insomnia/get-started) to get started.
 
     * In the Insomnia interface, change the HTTP method to GET and input the endpoint for GitHub: `https://api.github.com/repos/microsoft/vscode/pulls?state=open`
 
