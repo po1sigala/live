@@ -20,6 +20,8 @@ Work with a partner to implement the following user story:
 
 * Why do you need to require the `ObjectId()` when sending an `_id` string in JSON? 
 
+* When deleting a document, how can we inform users that the document with `_id` they provided was found in our collection?
+
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:
