@@ -8,19 +8,23 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
 ### Task 1: HTML Build
 
-1. Create a header/hero area that welcomes users to the application and displays the current time and date using Moment.js with `setInterval()`.
+1. Create a header/hero area that welcomes users to the application and displays the current time and date using Days.js. THe current time and date should be updated every second with `setInterval()`.
 
-2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/4.5/components/modal/).
+2. Create a Bootstrap card component explaining the instructions of how to use the app and a form for a user to add a new project to the tracker.
 
-3. The modal should contain a form asking users to fill in the following data:
+3. The form should ask users to fill in the following data:
 
     * The name of the project
 
     * The type of project (use a `<select>` drop-down)
 
-    * The hourly wage for the project
+    * The date the date the project is due.
 
-    * The due date for the project (use jQuery UI's datepicker with a minimum date setting in place)
+    * The month the project is due. (Use a `<select>` input with the name for each month. The `value` attribute may be set on each `<option>` to return a number for the month the user has selected.)
+
+    * The year the project is due.
+
+    * Optional: Use the jQuery UI datepicker instead of the three inputs to get the date.
 
 4. Include a Bootstrap table that the project's information can be printed to with columns for the following data:
 
@@ -28,21 +32,15 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
     * Project type
 
-    * Hourly wage
-
     * Due date
-
-    * Days until the due date (use Moment.js to calculate)
-
-    * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until the due date)
 
 While you build, remember the following guidelines:
 
-  * Ensure that any elements you need to interact with using JavaScript/jQuery are properly identified (e.g., form elements, the table body, etc.).
+* Ensure that any elements you need to interact with using JavaScript/jQuery are properly identified (e.g., form elements, the table body, etc.).
 
-  * Use different `<input>` element attributes to help enforce rules, like different `type` attribute values, minimum values, and required! See the [MDN web docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for more guidance.
+* Use different `<input>` element attributes to help enforce rules, like different `type` attribute values, minimum values, and required! See the [MDN web docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) for more guidance.
 
-  * When in doubt, read the Bootstrap documentation.
+* When in doubt, read the Bootstrap documentation.
 
 ---
 
@@ -54,25 +52,29 @@ While you build, remember the following guidelines:
 
 3. Attach a submit event listener to the `<form>` element using jQuery.
 
-4. On submission, capture the four input values from the form and pass them to another function to handle printing project data. Having one function that captures the data and another that prints the data to the page's `<table>` element will improve code readability.
+4. On submission, capture the input values from the form and update localStorage so that the projects that have been added are persistent.
 
 ---
 
 ### Task 3: Print Project Data to Page
 
-1. Create a function that will accept the four input fields' data as arguments.
+1. Create a function that will read the saved projects from localStorage.
 
 2. Create a table row (`<tr>`) element and save it to a variable.
 
-3. Create a table detail (`<td>`) element for each of the table columns created in Task 1.
+3. If the project is past due, give the row a class so that the row for the project will have a light red background. If the project is due today, give the row a class so that the row will have a light yellow class.
 
-4. For printing the days to the due date, use Moment.js to calculate the difference between the due date and the current time in days. 
+4. Create a table detail (`<td>`) element for each of the table columns created in Task 1.
 
-5. For printing the estimated total earned amount, assume that you work an eight-hour day. So multiply the hourly rate by 8 to get the daily rate, then multiply that value by how many days until the project is due to get the estimated total earned. 
+5. Create a td element for each column and append it to the `<tr>` element.
 
-6. Append all `<td>` elements to the table row created, then append the entire row to the `<tbody>` element on the page.
+6. Append each `<tr>` to the `<tbody>` element on the page.
 
-7. Don't forget to close the modal when done!
+7. Don't forget to clear the `<tbody>` before adding all the rows.
+
+8. Add a call to the function when the page loads.
+
+9. Update the function responsible for capturing form data so that it calls the function for printing the data.
 
 ---
 
