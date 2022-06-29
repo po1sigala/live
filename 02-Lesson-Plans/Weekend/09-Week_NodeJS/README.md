@@ -66,7 +66,7 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
 * [fs documentation](https://node.readthedocs.io/en/latest/api/fs/)
 
-* [inquirer documentation](https://www.npmjs.com/package/inquirer/v/0.2.3)
+* [inquirer documentation](https://www.npmjs.com/package/inquirer/v/8.2.4)
 
 * [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
 

@@ -18,7 +18,7 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
   * If Windows users get a `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/mysql-installation-windows-path.html).
 
-* For the Challenge this week, students will use MySQL, Node.js, and Inquirer to build a command-line application. For a refresher, refer students to the [npm documentation on Inquirer](https://www.npmjs.com/package/inquirer).
+* For the Challenge this week, students will use MySQL, Node.js, and Inquirer to build a command-line application. For a refresher, refer students to the [npm documentation on Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4).
 
 ## Career Connection
 

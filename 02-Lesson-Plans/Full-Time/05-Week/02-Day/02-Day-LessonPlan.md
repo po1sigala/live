@@ -4,6 +4,8 @@
 
 In this lesson, we will take a deeper dive into the world that is Node.js. We will explore how to take advantage of native modules that come built into Node.js itself. We will access the file system, pass command-line arguments into applications, get acquainted with Node Package Manager, and finally build CLI apps using a package called `inquirer`.
 
+> **Important**: Ensure that all activities using the `inquirer` package is using version 8.2.4. The latest version of `inquirer` (version 9+) introduces breaking changes to activities. All activities have version 8.2.4 in their respective `package.json` files but should you or your students install `inquirer`, please use `npm i inquirer@8.2.4`.
+
 ## Instructor Notes
 
 * In this lesson, students will complete activities `15-Ins_Modularization` through `27-Evr_Git-Fork`.
@@ -344,7 +346,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I see the `package.json` file created in the [Unsolved](./Unsolved/) folder.
 
-* It's done when I have installed the `inquirer` package successfully and see it listed in the `package.json` file.
+* It's done when I have installed the `inquirer` version 8.2.4 package successfully and see it listed in the `package.json` file.
 
 * It's done when I see the `node_modules` folder and `package-lock.json` file in the [Unsolved](./Unsolved/) folder.
 
@@ -396,17 +398,17 @@ Use [Google](https://www.google.com) or another search engine to research this.
   npm init
   ```
 
-  * 🔑  In order to install the `inquirer` package, we run `npm install inquirer`, or just `npm i inquirer`.
+  * 🔑  In order to install the `inquirer` package, we run `npm install inquirer@8.2.4`, or just `npm i inquirer@8.2.4`.
 
   ```sh
-  npm install inquirer
+  npm install inquirer@8.2.4
   ```
 
   * If we check our `package.json` file again, we will see `inquirer` listed under `dependencies`.
 
   ```json
   "dependencies": {
-    "inquirer": "^7.3.3"
+    "inquirer": "^8.2.4
   }
   ```
 
@@ -529,7 +531,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * It's done when I have initialized my repository with a `package.json` file by running `npm init -y`.
 
-  * It's done when I have installed inquirer and added it to my list of dependencies by running `npm i inquirer --save`.
+  * It's done when I have installed inquirer and added it to my list of dependencies by running `npm i inquirer@8.2.4`.
 
   * It's done when the application asks the user, "What is your name?"
     
@@ -636,7 +638,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
   
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [inquirer documentation](https://github.com/SBoudrias/Inquirer.js#readme), and stick around for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [inquirer documentation](https://www.npmjs.com/package/inquirer/v/8.2.4), and stick around for office hours to ask for help.
   
 * Answer any questions before moving to flex time.
 

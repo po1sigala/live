@@ -8,7 +8,7 @@ Work with a partner to implement the following user story:
 
 * It's done when I have initialized my repository with a `package.json` file by running `npm init -y`.
 
-* It's done when I have installed inquirer and added it to my list of dependencies by running `npm i inquirer@8.2.4`.
+* It's done when I have installed inquirer version 8.2.4 and added it to my list of dependencies by running `npm i inquirer@8.2.4`.
 
 * It's done when the application asks the user, "What is your name?"
   
