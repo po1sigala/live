@@ -12,7 +12,7 @@ In this activity, you will build a command-line tool that generates an HTML port
 
   * `fs` for writing to the file system
 
-  * `inquirer` for collecting user input
+  * `inquirer` version 8.2.4 for collecting user input
 
   * String template literals for generating a string version of the HTML document before it is written to the file system
 
