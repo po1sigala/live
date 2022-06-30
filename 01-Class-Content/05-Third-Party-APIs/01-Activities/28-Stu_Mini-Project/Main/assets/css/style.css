@@ -6,6 +6,21 @@
   --lightyellow: #fff5d1;
 }
 
+/* Apply custom Google font */
+body {
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+
 .custom-card-header,
 .header,
 .btn-custom {
