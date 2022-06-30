@@ -1,6 +1,6 @@
 # Module 05 Mini-Project: Project Tracker
 
-In this project, you will work with others to create a project tracker application using Bootstrap, jQuery, jQueryUI, Moment, and Google Fonts. Break up these phases amongst members of your team.
+In this project, you will work with others to create a project tracker application using Bootstrap, jQuery and Day.js. Break up these phases amongst members of your team.
 
 ## Instructions
 
@@ -8,7 +8,7 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
 ### Task 1: HTML Build
 
-1. Create a header/hero area that welcomes users to the application and displays the current time and date using Days.js. THe current time and date should be updated every second with `setInterval()`.
+1. Create a header/hero area that welcomes users to the application and displays the current time and date using Days.js. THe current time and date should be updated every second with `setInterval()`. The data should be formatted with the abbreviated month, day, full year, and time. (e.g. `Jun 30, 2022 at 08:37:48 am`)
 
 2. Create a Bootstrap card component explaining the instructions of how to use the app and a form for a user to add a new project to the tracker.
 
@@ -18,13 +18,9 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
     * The type of project (use a `<select>` drop-down)
 
-    * The date the date the project is due.
+    * The date the project is due. (Use the `date` input type.)
 
-    * The month the project is due. (Use a `<select>` input with the name for each month. The `value` attribute may be set on each `<option>` to return a number for the month the user has selected.)
-
-    * The year the project is due.
-
-    * Optional: Use the jQuery UI datepicker instead of the three inputs to get the date.
+    * Optional: Use the jQuery UI datepicker instead of `date` input type.
 
 4. Include a Bootstrap table that the project's information can be printed to with columns for the following data:
 
@@ -52,7 +48,9 @@ While you build, remember the following guidelines:
 
 3. Attach a submit event listener to the `<form>` element using jQuery.
 
-4. On submission, capture the input values from the form and update localStorage so that the projects that have been added are persistent.
+4. On submission, capture the input values from the form and update localStorage so that the projects that have been added are persistent. Clear the form data so that the user can easily add additional projects.
+
+5. Call the function to print the project data on the page.
 
 ---
 
@@ -62,11 +60,11 @@ While you build, remember the following guidelines:
 
 2. Create a table row (`<tr>`) element and save it to a variable.
 
-3. If the project is past due, give the row a class so that the row for the project will have a light red background. If the project is due today, give the row a class so that the row will have a light yellow class.
+3. If the project is past due, give the row a class so that the row for the project will have a light red background. If the project is due today, give the row a class so that the row will have a light yellow background.
 
-4. Create a table detail (`<td>`) element for each of the table columns created in Task 1.
+4. Create a table detail (`<td>`) element for each of the corresponding project fields in Task 1.
 
-5. Create a td element for each column and append it to the `<tr>` element.
+5. Append each `<td>` element to the `<tr>`.
 
 6. Append each `<tr>` to the `<tbody>` element on the page.
 
@@ -84,7 +82,7 @@ While you build, remember the following guidelines:
 
 2. When generating a new `<tr>` for a project, add one more `<td>` that holds a button for deleting a project from the list.
 
-3. Use jQuery event delegation to attach an event listener to each of those buttons so that when clicked, the parent `<tr>` element will be removed from the page.
+3. Use jQuery event delegation to attach an event listener to each of those buttons so that when clicked, the parent `<tr>` element will be removed from the page and the project is removed from localStorage. (HINT: How might using a data-* attribute be helpful?)
 
 ---
 
