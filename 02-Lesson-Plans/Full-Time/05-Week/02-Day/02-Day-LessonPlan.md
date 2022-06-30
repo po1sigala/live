@@ -408,7 +408,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   ```json
   "dependencies": {
-    "inquirer": "^8.2.4
+    "inquirer": "8.2.4"
   }
   ```
 
