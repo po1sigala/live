@@ -7,15 +7,15 @@ function printHighscores() {
     return b.score - a.score;
   });
 
-  highscores.forEach(function (score) {
+  for (var i = 0; i < highscores.length; i += 1) {
     // create li tag for each high score
     var liTag = document.createElement('li');
-    liTag.textContent = score.initials + ' - ' + score.score;
+    liTag.textContent = highscores[i].initials + ' - ' + highscores[i].score;
 
     // display on page
     var olEl = document.getElementById('highscores');
     olEl.appendChild(liTag);
-  });
+  }
 }
 
 function clearHighscores() {

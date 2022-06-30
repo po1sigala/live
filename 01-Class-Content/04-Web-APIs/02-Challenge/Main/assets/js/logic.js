@@ -45,8 +45,9 @@ function getQuestion() {
   choicesEl.innerHTML = '';
 
   // loop over choices
-  currentQuestion.choices.forEach(function (choice, i) {
+  for (var i = 0; i < currentQuestion.choices.length; i++) {
     // create new button for each choice
+    var choice = currentQuestion.choices[i];
     var choiceNode = document.createElement('button');
     choiceNode.setAttribute('class', 'choice');
     choiceNode.setAttribute('value', choice);
@@ -58,7 +59,7 @@ function getQuestion() {
 
     // display on the page
     choicesEl.appendChild(choiceNode);
-  });
+  }
 }
 
 function questionClick() {
