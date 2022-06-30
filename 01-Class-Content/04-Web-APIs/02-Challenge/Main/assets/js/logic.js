@@ -100,7 +100,7 @@ function questionClick(event) {
   currentQuestionIndex++;
 
   // check if we've run out of questions
-  if (currentQuestionIndex === questions.length) {
+  if (time <= 0 || currentQuestionIndex === questions.length) {
     quizEnd();
   } else {
     getQuestion();
