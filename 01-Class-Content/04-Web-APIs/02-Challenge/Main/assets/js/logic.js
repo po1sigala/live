@@ -54,17 +54,21 @@ function getQuestion() {
 
     choiceNode.textContent = i + 1 + '. ' + choice;
 
-    // attach click event listener to each choice
-    choiceNode.onclick = questionClick;
-
     // display on the page
     choicesEl.appendChild(choiceNode);
   }
 }
 
-function questionClick() {
+function questionClick(event) {
+  var buttonEl = event.target;
+
+  // if the clicked element is not a choice button, do nothing.
+  if (!buttonEl.matches('.choice')) {
+    return;
+  }
+
   // check if user guessed wrong
-  if (this.value !== questions[currentQuestionIndex].answer) {
+  if (buttonEl.value !== questions[currentQuestionIndex].answer) {
     // penalize time
     time -= 15;
 
@@ -167,5 +171,8 @@ submitBtn.onclick = saveHighscore;
 
 // user clicks button to start quiz
 startBtn.onclick = startQuiz;
+
+// user clicks on element containing choices
+choicesEl.onclick = questionClick;
 
 initialsEl.onkeyup = checkForEnter;
