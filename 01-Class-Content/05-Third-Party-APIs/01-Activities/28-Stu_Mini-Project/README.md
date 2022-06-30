@@ -10,9 +10,9 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
 1. Create a header/hero area that welcomes users to the application and displays the current time and date using Days.js. THe current time and date should be updated every second with `setInterval()`. The data should be formatted with the abbreviated month, day, full year, and time. (e.g. `Jun 30, 2022 at 08:37:48 am`)
 
-2. Create a Bootstrap card component explaining the instructions of how to use the app and a form for a user to add a new project to the tracker.
+2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/4.5/components/modal/).
 
-3. The form should ask users to fill in the following data:
+3. The modal should contain a form asking users to fill in the following data:
 
     * The name of the project
 
@@ -51,6 +51,8 @@ While you build, remember the following guidelines:
 4. On submission, capture the input values from the form and update localStorage so that the projects that have been added are persistent. Clear the form data so that the user can easily add additional projects.
 
 5. Call the function to print the project data on the page.
+
+6. Ensure the modal closes when the user submits the form.
 
 ---
 
