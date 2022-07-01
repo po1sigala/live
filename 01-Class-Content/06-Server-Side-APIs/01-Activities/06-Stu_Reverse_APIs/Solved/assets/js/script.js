@@ -15,10 +15,10 @@ $.ajax({
 
 // Send an API request using the built-in browser fetch method. Fetch passes a
 // response object when calling back the function passed to .then(). Unlike
-// $.ajax, this response object is more thant just the data. The body of the
-// response must be parsed by using one the methods for parsing the response. In
-// this example, the .json() method is used because the GitHub API response uses
-// JSON for the format.
+// $.ajax, the response object contains additional information about the
+// response. The response body must be parsed by using one the methods for
+// parsing the response. In this example, the .json() method is used because the
+// GitHub API response uses JSON for the format.
 fetch(requestUrl)
   .then(function (response) {
     // In order to use the data, it must first be parsed. Use .json() when the
@@ -30,8 +30,8 @@ fetch(requestUrl)
     console.log(data);
   });
 
-// Send an API request using the built-in browser XMLHttpRequest object.
-// This API is much older than fetch and appeared in very early browsers like IE.
+// Send an API request using the built-in browser XMLHttpRequest object. This
+// API is much older than fetch and appears in older browsers like IE.
 // Construct an instance of XMLHttpRequest.
 var xhr = new XMLHttpRequest();
 // Assign a callback function which will be run any time the state of the request changes.
