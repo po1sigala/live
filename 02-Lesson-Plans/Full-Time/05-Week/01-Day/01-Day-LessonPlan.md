@@ -4,11 +4,13 @@
 
 This lesson introduces Node.js and the new syntax that comes with ES6. This includes arrow functions and new variables `let` and `const`. We will also cover template literals and how they can be helpful in the development process.
 
+> **Important**: Ensure that all activities using the `inquirer` package is using version 8.2.4. The latest version of `inquirer` (version 9+) introduces breaking changes to activities. All activities have version 8.2.4 in their respective `package.json` files but should you or your students install `inquirer`, please use `npm i inquirer@8.2.4`.
+
 ## Instructor Notes
 
 * In this lesson, students will complete activities `01-Ins_Node-Demo` through `14-Stu_appendFile`.
 
-* Students will be expected to have the latest LTS version of Node.js installed prior to class, but if they don't, be sure to tell them that they can install it using the resources found on the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs). Remind students that it is important to download the recommended LTS or Long Term Support version, since this is the most recent stable release. 
+* Students will be expected to have the latest LTS version of Node.js installed prior to class, but if they don't, be sure to tell them that they can install it using the resources found on the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs). Remind students that it is important to download the recommended LTS or Long Term Support version, since this is the most recent stable release.
 
 * Transitioning from client-side to back-end development can be a little confusing at first. Remind students that Node.js is Chrome's V8 engine running on the machine rather than in the browser, giving us access to things like the file system.
 
