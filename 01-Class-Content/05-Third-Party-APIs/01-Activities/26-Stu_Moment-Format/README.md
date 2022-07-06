@@ -6,19 +6,17 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when every question prompt on the page is correctly answered and displayed in the correct format using Moment.js.
+* It's done when every question prompt on the page is correctly answered and displayed in the correct format using Day.js.
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
-[Moment.js Docs](https://momentjs.com/docs/#/displaying/)
-
-**Note**: `Moment.js` has historically been the most popular date/time library, but is now no longer supported by its developers. It is still functional and widely used, which is why we are introducing it through this module.
+[Day.js Docs](https://day.js.org/docs/en/display/format)
 
 ## 💡 Hints
 
-* Refer to the official [Moment.js docs on parsing](https://momentjs.com/docs/#/parsing/) to format ISO 8601 strings.
+* Refer to the official [Day.js docs on parsing](https://day.js.org/docs/en/parse/string) to parse ISO 8601 strings.
 
 * Follow the instructions provided by the comments in the starter code to format the date that answers the questions and assign them to the declared variable provided.
 
@@ -28,7 +26,9 @@ Refer to the following documentation:
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
   
-* How can we measure the difference between two time stamps with `Moment.js`? Read the [Moment.js Docs](https://momentjs.com/docs/) to research how this works.
+* What is a Day.js plugin? How do you use a Day.js plugin? Read the Day.js documentation to research plugins. (<https://day.js.org/docs/en/plugin/plugin>)
+
+* List three different Day.js plugins and their purposes.
 
 ---
 
