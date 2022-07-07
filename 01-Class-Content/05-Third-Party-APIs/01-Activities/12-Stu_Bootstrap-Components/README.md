@@ -8,8 +8,6 @@ Work with a partner to implement the following user story:
 
 * It's done when the page has a styled navbar.
 
-* It's done when the page has a styled jumbotron.
-
 * It's done when the page has a styled and dismissible alert box.
 
 * It's done when the page has a styled form.
@@ -20,9 +18,9 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
-[Bootstrap Documentation for Components](https://getbootstrap.com/docs/4.5/components/)
+[Bootstrap Documentation for Components](https://getbootstrap.com/docs/5.1/components/)
 
 ## Assets
 
