@@ -19,7 +19,7 @@
   color: var(--light);
 }
 
-.custom-jumbotron {
+.hero {
   background-color: var(--seablue);
   color: var(--darkblue);
 }

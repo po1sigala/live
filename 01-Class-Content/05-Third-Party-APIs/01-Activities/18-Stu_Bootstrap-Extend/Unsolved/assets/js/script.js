@@ -8,12 +8,14 @@ var printGuestData = function (name, comment) {
   cardColumnEl.addClass('col-12 col-sm-4 col-md-3');
 
   var cardEl = $('<div>');
-  // add another class for `custom-card`
-  cardEl.addClass('card h-100');
+  // TODO: add another class for `custom-card`
+  cardEl.addClass('card h-100 custom-card');
   cardEl.appendTo(cardColumnEl);
 
-  // add another class for `custom-card-header`
-  var cardName = $('<h5>').addClass('card-header').text(name);
+  // TODO: add another class for `custom-card-header`
+  var cardName = $('<h5>')
+    .addClass('card-header custom-card-header')
+    .text(name);
   cardName.appendTo(cardEl);
 
   var cardBodyEl = $('<div>');
