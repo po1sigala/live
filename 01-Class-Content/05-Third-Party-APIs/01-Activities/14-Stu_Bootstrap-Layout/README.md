@@ -12,9 +12,9 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
-[Bootstrap Documentation for the Grid](https://getbootstrap.com/docs/4.5/layout/grid/)
+[Bootstrap Documentation for the Grid](https://getbootstrap.com/docs/5.1/layout/grid/)
 
 ## Assets
 
