@@ -10,8 +10,6 @@ In this class, we will start by doing the mini-project from Module 09 on Node.js
 
 * In this lesson, students will complete activities `28-Stu_Mini-Project` from Module 09 through `08-Stu_Promises` in Module 10.
 
-* **Important**: Trilogy as a company values transparency and data-driven change quite highly. We know that some areas will need improvement as we grow. It’s hard for us to know what these areas are unless we ask questions. Your candid input truly matters to us, as you are vital members of the Trilogy team. In addition to individual feedback at the end of each lesson plan, we would appreciate the feedback of all instructors and TAs in the [mid-course instructional staff survey](https://forms.gle/yPfrY4CjNeAqbVKD6).
-
 * Be sure to review the activities before class. Try to anticipate any questions that students might have, especially on these core OOP topics!
 
 * Constructors are extremely useful in creating objects of similar types and allow for the development of very interesting applications. Make sure your students have a firm understanding of how objects function.
