@@ -69,4 +69,4 @@ Here are some prompts an interviewer may ask to ensure you understand the proble
 * **Note**: The pivot value for each iteration of the quick sort function has an important role because it is what connects the values lesser than or equal to it in the left array to the values greater than it in the right array.
 
 - - -
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

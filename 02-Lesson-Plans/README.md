@@ -120,4 +120,4 @@ Finally, Handlebars is currently used in only one module and one project. Isolat
 
 Although industry feedback has shown that having some knowledge of the AWS ecosystem is an important skill to have as a developer, covering an extremely large and varied topic such as AWS in an already limited amount of time would mean that we would have to eliminate some of the foundational technologies and concepts necessary to learn web development. To this end, we now offer asynchronous modules of additional content known as Continuation Courses to all of our boot camp graduates, including a module focusing exclusively on AWS.
 
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

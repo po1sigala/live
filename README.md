@@ -35,4 +35,4 @@ Found a bug? [Log an Issue](https://github.com/coding-boot-camp/FullStack-Ground
 For emergencies, message the Full Stack Program Support Manager, `@Courtney Mathena`, in [#05-web-dev-course](https://trilogyed-instruction.slack.com/messages/C1073F9N0/).
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand.  Confidential and Proprietary.  All Rights Reserved.
+© 2022 edX Boot Camps LLC.  Confidential and Proprietary.  All Rights Reserved.

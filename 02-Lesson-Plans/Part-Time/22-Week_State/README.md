@@ -109,4 +109,4 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 * [Stripe documentation](https://stripe.com/docs)
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
