@@ -12,6 +12,7 @@ var reformatDate = dayjs('2020-11-03').format('dddd, MMMM D YYYY, h:mm:ss a');
 $('#3a').text(reformatDate);
 
 // 4. I need to place my recycling bin on the curb on every odd week of the year for collection. Do I need to put out my recycling bin out this week?
+// Dayjs' .diff() method does NOT include partial weeks in its calculation.
 var beginningOfYear = dayjs('2022-01-01');
 var weekNum = today.diff(beginningOfYear, 'week');
 
