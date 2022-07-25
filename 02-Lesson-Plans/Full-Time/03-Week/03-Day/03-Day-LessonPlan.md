@@ -101,7 +101,7 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
 1. Create a header/hero area that welcomes users to the application and displays the current time and date using Moment.js with `setInterval()`.
 
-2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/4.5/components/modal/).
+2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/5.1/components/modal/).
 
 3. The modal should contain a form asking users to fill in the following data:
 
@@ -289,7 +289,7 @@ While you build, remember the following guidelines:
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) or the [Bootstrap documentation on components](https://getbootstrap.com/docs/4.5/components/modal/), and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) or the [Bootstrap documentation on components](https://getbootstrap.com/docs/5.1/components/modal/), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
