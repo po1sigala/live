@@ -8,13 +8,15 @@ In this class, we will perform DOM manipulations that students are already famil
 
 * In this lesson, students will complete activities `01-Ins_jQuery-Elements` through `14_Stu_Bootstrap-Layout`.
 
-* Take a few minutes before class to get familiar with the [jQuery API documentation](https://api.jquery.com/), as students will rely heavily on it in class and might need help finding answers.
+* Take a few minutes before class to get familiar with both the [jQuery API documentation](https://api.jquery.com/) and [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/), as students will rely heavily on it in class and might need help finding answers.
 
 * Throughout the class, reiterate often that the vanilla JavaScript DOM methods we have used previously like `document.getElementById`, `document.body.children`, and `Element.innerHTML` all have corresponding jQuery methods as well as a powerful selector feature, to select elements in the DOM.
 
 * Students can get hung up on learning the correct syntax. Encourage them that the interface gets easier to understand with practice and time.
 
 * If students continually question why they are learning jQuery even though they have already learned how to manipulate the DOM with vanilla JavaScript, tell them that it is due to the longstanding prevalence and popularity of jQuery on the web. Also, knowing how to learn new libraries and measure their benefits is an important skill to have.
+
+* Note that all of our activities are using Bootstrap v5.1.3. Students may see references to Bootstrap v5.2 which is where `https://getbootstrap.com` defaults to. Although there doesn't appear to be many differences, please note that Bootstrap v5.2 is still in Beta at the time of writing this. All links within this lesson plan as well as student activities point towards Bootstrap v5.1 documentation.
 
 * If you are comfortable doing so, live-code the solutions to the activities. If not, just use the solutions provided and follow the prompts and talking points for review.
 
@@ -126,7 +128,7 @@ We will use jQuery to do the following:
 
       * And most importantly, ask questions.
 
-* In this module, we will learn how to integrate these third-party APIs with applications. Specifically, we'll learn how to work with jQuery, Bootstrap, Google Fonts, jQuery UI, and MomentJS!
+* In this module, we will learn how to integrate these third-party APIs with applications. Specifically, we'll learn how to work with jQuery, Bootstrap, Google Fonts, jQuery UI, and DayJS!
 
 * Open `28-Stu_Mini-Project/Solved/index.html` in your browser.
 
@@ -134,7 +136,7 @@ We will use jQuery to do the following:
 
   * 🔑 It is a web application to track the amount of money earned on projects.
 
-  * 🔑 This page is built with minimal custom CSS styles, and most of the complex JavaScript is handled by jQuery, jQuery UI, and MomentJS!
+  * 🔑 This page is built with minimal custom CSS styles, and most of the complex JavaScript is handled by jQuery, jQuery UI, and DayJS!
 
 * Demonstrate the following:
 
@@ -1003,7 +1005,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * 🙋 By visiting the documentation!
 
-* Open the [Bootstrap website](https://getbootstrap.com) and then select the Get Started button to open the documentation.
+* Open the [Bootstrap website](https://getbootstrap.com/docs/5.1/getting-started/introduction/) and then select the Get Started button to open the documentation.
 
 * Walk through the Quick Start section of the page, explaining the CSS file and three JavaScript/jQuery dependencies. We don't always need the `<script>` tags for our app to work, but they're needed for certain offerings that Bootstrap provides.
 
@@ -1064,8 +1066,6 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * It's done when the page has a styled navbar.
 
-  * It's done when the page has a styled jumbotron.
-
   * It's done when the page has a styled and dismissible alert box.
 
   * It's done when the page has a styled form.
@@ -1078,7 +1078,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   Refer to the following documentation:
 
-  [Bootstrap documentation on components](https://getbootstrap.com/docs/4.5/components/)
+  [Bootstrap documentation on components](https://getbootstrap.com/docs/5.1/components/)
 
   ## Assets
 
@@ -1159,7 +1159,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation](https://getbootstrap.com/), and stay for office hours to ask for help.
+* 🙋 We can refer to supplemental material, read the [Bootstrap documentation](https://getbootstrap.com/docs/5.1/), and stay for office hours to ask for help.
 
 * Answer any questions before introducing the next demo.
 
@@ -1220,7 +1220,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   Refer to the following documentation:
 
-  [Bootstrap documentation on the grid](https://getbootstrap.com/docs/4.5/layout/grid/)
+  [Bootstrap documentation on the grid](https://getbootstrap.com/docs/5.1/layout/grid/)
 
   ## Assets
 
@@ -1299,7 +1299,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation on the grid](https://getbootstrap.com/docs/4.5/layout/grid/), and stay for office hours to ask for help. Use the Bootstrap examples provided in the documentation to give yourself a starting point, then continue to tweak the class names to try and configure different layouts. Having a good understanding of CSS flexbox properties will ultimately be the best way to learn it too.
+  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation on the grid](https://getbootstrap.com/docs/5.1/layout/grid/), and stay for office hours to ask for help. Use the Bootstrap examples provided in the documentation to give yourself a starting point, then continue to tweak the class names to try and configure different layouts. Having a good understanding of CSS flexbox properties will ultimately be the best way to learn it too.
 
 * Answer any questions before proceeding to the next demo.
 
