@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   function hourUpdater() {
     // get current number of hours
-    var currentHour = moment().hours();
+    var currentHour = dayjs().hour();
 
     // loop over time blocks
     $('.time-block').each(function () {
@@ -42,7 +42,7 @@ $(document).ready(function () {
   hourUpdater();
 
   // set up interval to check if current time needs to be updated
-  var interval = setInterval(hourUpdater, 15000);
+  setInterval(hourUpdater, 15000);
 
   // load any saved data from localStorage
   $('#hour-9 .description').val(localStorage.getItem('hour-9'));
@@ -56,5 +56,5 @@ $(document).ready(function () {
   $('#hour-17 .description').val(localStorage.getItem('hour-17'));
 
   // display current day on page
-  $('#currentDay').text(moment().format('dddd, MMMM Do'));
+  $('#currentDay').text(dayjs().format('dddd, MMMM D, YYYY'));
 });
