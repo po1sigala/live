@@ -26,7 +26,7 @@ To reproduce the problem, follow these steps:
 
 Refer to the documentation:
 
-[Workbox docs on runtime caching](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack#adding_runtime_caching)
+[Workbox docs on configuring GenerateSW](https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSWConfig)
 
 ## 💡 Hints
 
