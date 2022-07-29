@@ -6,7 +6,7 @@ Work with a partner to resolve the following issue:
 
 ## Expected Behavior
 
-Images should not only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2.
+Images should only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2.
 
 ## Actual Behavior
 
