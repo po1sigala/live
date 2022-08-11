@@ -50,7 +50,7 @@
 
 	* We loop through each character in the string, initializing a `count` variable at 0. 
 
-	* We assign a the variable `char` to its corresponding character in the string.
+	* We assign the variable `char` to its corresponding character in the string.
 
 	* We loop through the array, incrementing the `count` variable every time we see the same character from the first `for` loop.
 
