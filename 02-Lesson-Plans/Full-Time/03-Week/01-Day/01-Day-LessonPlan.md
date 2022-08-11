@@ -1066,7 +1066,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * It's done when the page has a styled navbar.
 
-  * It's done when the page has a styled and dismissible alert box.
+  * It's done when the page has a styled and dismissable alert box.
 
   * It's done when the page has a styled form.
 
@@ -1255,7 +1255,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-  * ✔️ `col-*` needs to be direct child of `row`.
+  * ✔️ `col-*` needs to be a direct child of `row`.
 
   * ✔️ It's mobile-first. Use breakpoints to go up, not down.
 
