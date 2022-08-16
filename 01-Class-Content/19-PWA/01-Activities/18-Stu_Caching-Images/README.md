@@ -6,7 +6,7 @@ Work with a partner to resolve the following issue:
 
 ## Expected Behavior
 
-Images should not only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2.
+Images should only be cached as they are used and not precached. In addition, the total number of cached images should be limited to 2.
 
 ## Actual Behavior
 
@@ -26,7 +26,7 @@ To reproduce the problem, follow these steps:
 
 Refer to the documentation:
 
-[Workbox docs on runtime caching](https://developers.google.com/web/tools/workbox/guides/generate-service-worker/webpack#adding_runtime_caching)
+[Workbox docs on configuring GenerateSW](https://developer.chrome.com/docs/workbox/reference/workbox-webpack-plugin/#type-GenerateSWConfig)
 
 ## 💡 Hints
 

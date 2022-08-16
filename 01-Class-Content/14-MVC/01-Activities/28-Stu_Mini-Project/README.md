@@ -34,6 +34,8 @@ In this mini-project, you will work with a group to build a full-stack crowdfund
 
 * It's done when a logged-in user can select a "Logout" button to remove their session.
 
+* It's done when the session for a logged-in user expires after a set time.
+
 * It's done when the API routes to create and delete posts are protected from non logged-in users.
 
 * It's done when the code is organized using MVC architecture.
