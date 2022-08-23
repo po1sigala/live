@@ -1141,7 +1141,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Open `18-Stu_Cookies/Solved/server.js` in your IDE and explain the following:
 
-  * 🔑 To set up cookies, we first need to initialize Sequelize with the session store. To do that, we need to install and import `connect-session-sequelize`. The `connect-session-sequelize` library automatically stores the sessions created by `express-session` into the database! See the following code for an example:
+  * 🔑 To set up cookies for database sessions, we first need to initialize Sequelize with the session store. To do that, we need to install and import `connect-session-sequelize`. The `connect-session-sequelize` library automatically stores the sessions created by `express-session` into the database! See the following code for an example:
 
     ```js
     const SequelizeStore = require('connect-session-sequelize')(session.Store);
