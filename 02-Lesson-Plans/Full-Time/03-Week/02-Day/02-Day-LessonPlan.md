@@ -876,7 +876,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
   * First we need to create a day object for today. We will use this in all of the answers. We can do so with the following code:
 
     ```js
-    var today = day();
+    var today = dayjs();
     ```
 
   * For the answer to the first question, we format the day object `today` to use `MMM D, YYYY` format:
