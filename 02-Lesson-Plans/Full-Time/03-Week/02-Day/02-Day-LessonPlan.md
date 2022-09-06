@@ -386,7 +386,7 @@ By the end of class students will be able to:
 
   * ✔️ Use the `<link>` provided.
 
-  * ✔️ Don't pick too many fonts or , for performance reasons.
+  * ✔️ Don't pick too many fonts or variations, for performance reasons.
 
 * Open `20-Stu_Google-Fonts/Solved/index.html` in your IDE and explain the following:
 
@@ -873,7 +873,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Open `25-Ins_Day-Format/assets/js/script.js` in your IDE and explain the following:
 
-  * First we need to create a Day object for today. We will use this in all of the answers. We can do so with the following code:
+  * First we need to create a day object for today. We will use this in all of the answers. We can do so with the following code:
 
     ```js
     var today = dayjs();
@@ -900,7 +900,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
     $('#3a').text(reformatDate);
     ```
 
-  * Lastly, we determine what week of the year we fall on right now, and use a `if/else` statement to determine if it is odd or even. Then we print to the screen a boolean along with the current week number:
+  * Lastly, we determine what week of the year we fall on right now, and use an `if/else` statement to determine if it is odd or even. Then we print to the screen a boolean along with the current week number:
 
     ```js
     var beginningOfYear = dayjs('2022-01-01');

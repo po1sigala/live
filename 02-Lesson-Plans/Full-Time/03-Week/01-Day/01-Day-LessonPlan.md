@@ -128,7 +128,7 @@ We will use jQuery to do the following:
 
       * And most importantly, ask questions.
 
-* In this module, we will learn how to integrate these third-party APIs with applications. Specifically, we'll learn how to work with jQuery, Bootstrap, Google Fonts, jQuery UI, and DayJS!
+* In this module, we will learn how to integrate these third-party APIs with applications. Specifically, we'll learn how to work with jQuery, Bootstrap, Google Fonts, jQuery UI, and Day.js!
 
 * Open `28-Stu_Mini-Project/Solved/index.html` in your browser.
 
@@ -136,7 +136,7 @@ We will use jQuery to do the following:
 
   * 🔑 It is a web application to track the amount of money earned on projects.
 
-  * 🔑 This page is built with minimal custom CSS styles, and most of the complex JavaScript is handled by jQuery, jQuery UI, and DayJS!
+  * 🔑 This page is built with minimal custom CSS styles, and most of the complex JavaScript is handled by jQuery, jQuery UI, and Day.js!
 
 * Demonstrate the following:
 
@@ -565,7 +565,7 @@ If you have completed the activity and want to further your knowledge, work thro
 ```md
 # 📖 Implement a Shopping List Form
 
-Work with a partner to implement the following user storys:
+Work with a partner to implement the following user stories:
 
 * As an online shopper, I want to be able to add items to my shopping list so that I can view them all in one place.
 
@@ -687,7 +687,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * Note that we can chain traversal methods to the jQuery selector to select descendants or ancestors.
 
-  * Note that the `children()` traversal method only affects direct children. The reason why the list items also have yellow font is because the unordered list parent element `<ul>` was assigned the css rule `{ color: yellow; }` which affects the list items, as can be seen in the browser's Elements tab.
+  * Note that the `children()` traversal method only affects direct children. The reason why the list items also have yellow font is because the unordered list parent element `<ul>` was assigned the CSS rule `{ color: yellow; }` which affects the list items, as can be seen in the browser's Elements tab.
 
   * In the console, we can see the log of the children of the element `<main id="top">` and its corresponding index starting with index 0. Note that only the direct children, not any further nested elements like the `<li>` elements are logged.
 
@@ -748,7 +748,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
   ```md
   # 📖 Implement Tic-Tac-Toe Automation
 
-  Work with a partner to implement the following user story:
+  Work with a partner to implement the following user stories:
 
   * As a game developer, I want to programmatically change the board style.
 
@@ -782,7 +782,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   ## 💡 Hint
 
-  * The starting point for all the the traversals in this activity must begin at the `<main id="root">`, which has been assigned for you as `rootEl`.
+  * The starting point for all the traversals in this activity must begin at the `<main id="root">`, which has been assigned for you as `rootEl`.
 
   ## 🏆 Bonus
 
@@ -829,7 +829,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
     var rowThree = rootEl.children('ul').eq(2);
     ```
 
-  * 🔑 We use `eq(0)`, to select the first element of the last row. We use the `text('O')` to insert the text O into the first box of row three:
+  * 🔑 We use `eq(0)` to select the first element of the last row. We use the `text('O')` to insert the text "O" into the first box of row three:
 
     ```js
     rowThree.children().eq(0).text('O');
@@ -1066,7 +1066,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * It's done when the page has a styled navbar.
 
-  * It's done when the page has a styled and dismissible alert box.
+  * It's done when the page has a styled and dismissable alert box.
 
   * It's done when the page has a styled form.
 
@@ -1255,7 +1255,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Use the prompts and talking points (🔑) below to review the following key points (✔️):
 
-  * ✔️ `col-*` needs to be direct child of `row`.
+  * ✔️ `col-*` needs to be a direct child of `row`.
 
   * ✔️ It's mobile-first. Use breakpoints to go up, not down.
 
