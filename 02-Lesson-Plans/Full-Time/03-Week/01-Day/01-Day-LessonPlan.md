@@ -1007,7 +1007,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Open the [Bootstrap website](https://getbootstrap.com/docs/5.1/getting-started/introduction/) and then select the Get Started button to open the documentation.
 
-* Walk through the Quick Start section of the page, explaining the CSS file and three JavaScript/jQuery dependencies. We don't always need the `<script>` tags for our app to work, but they're needed for certain offerings that Bootstrap provides.
+* Walk through the Quick Start section of the page, explaining the CSS file and the bundled JavaScript dependency. We don't always need the `<script>` tags for our app to work, but they're needed for certain offerings that Bootstrap provides.
 
 * Briefly touch on how Bootstrap can be thought of in three main solutions:
 
@@ -1270,7 +1270,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
     ```html
     <div class="row align-items-end">
       <div class="col-12 col-md-6">
-        <img class="img-fluid" src="https://via.placeholder.com/1920x1080" alt="video placeholder" />
+        <img class="img-fluid" src="./../Images/02-placeholder.png" alt="video placeholder" />
       </div>
 
       <div class="col-12 col-md-6">

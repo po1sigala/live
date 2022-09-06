@@ -202,55 +202,105 @@ While you build, remember the following guidelines:
 
   * 🔑 We can find the general code for the modal in the official documentation for Bootstrap modals. In the modal, we will put in a form. Notice the id for the input fields, shown in the following example:
 
-    ```js
-    <div class="mb-3">
-      <label for="project-name-input">Project Name</label>
-      <input
-        type="text"
-        id="project-name-input"
-        class="form-control"
-        placeholder="Enter the project's name"
-        required
-      />
-    </div>
-    <div class="mb-3">
-      <label for="project-type-input" class="form-label"
-        >Project Type</label
-      >
-      <select id="project-type-input" class="form-select">
-        <option value="Web Application (Front End)">
-          Web Application (Front End)
-        </option>
-        <option value="Web Application (Back End)">
-          Web Application (Back End)
-        </option>
-        <option value="Web Application (Full Stack)">
-          Web Application (Full Stack)
-        </option>
-        <option value="Mobile Application">Mobile Application</option>
-        <option value="Print Campaign">Print Campaign</option>
-        <option value="Digital Marketing Campaign">
-          Digital Marketing Campaign
-        </option>
-      </select>
-    </div>
-    <div class="mb-3">
-      <label for="project-date-input">Due Date</label>
-      <input
-        type="date"
-        id="project-date-input"
-        class="form-control"
-        required
-      />
-    </div>
+    ```html
+         <div
+      class="modal fade"
+      id="new-project-modal"
+      tabindex="-1"
+      aria-labelledby="new-project-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="project-form">
+            <div class="modal-header custom-modal-header">
+              <h5 class="modal-title" id="new-project-modal-label">
+                Add a new project
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="project-name-input">Project Name</label>
+                <input
+                  type="text"
+                  id="project-name-input"
+                  class="form-control"
+                  placeholder="Enter the project's name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="project-type-input" class="form-label"
+                  >Project Type</label
+                >
+                <select id="project-type-input" class="form-select">
+                  <option value="Web Application (Front End)">
+                    Web Application (Front End)
+                  </option>
+                  <option value="Web Application (Back End)">
+                    Web Application (Back End)
+                  </option>
+                  <option value="Web Application (Full Stack)">
+                    Web Application (Full Stack)
+                  </option>
+                  <option value="Mobile Application">Mobile Application</option>
+                  <option value="Print Campaign">Print Campaign</option>
+                  <option value="Digital Marketing Campaign">
+                    Digital Marketing Campaign
+                  </option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="project-date-input">Due Date</label>
+                <input
+                  type="date"
+                  id="project-date-input"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <!--
+                The data-bs-dismiss attribute tells Bootstrap to hide the <div
+                class="modal-footer"> element on click.
+              -->
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="btn btn-custom"
+                data-bs-dismiss="modal"
+              >
+                Add Project
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     ```
 
 * 🔑 We can see how we capture the form content by looking at the function for handling the form submit in `script.js`:
 
     ```js
+    var timeDisplayEl = $('#time-display');
+    var projectDisplayEl = $('#project-display');
+    var projectFormEl = $('#project-form');
     var projectNameInputEl = $('#project-name-input');
     var projectTypeInputEl = $('#project-type-input');
     var projectDateInputEl = $('#project-date-input');
+    
     function handleProjectFormSubmit(event) {
       event.preventDefault();
       // read user input from the form

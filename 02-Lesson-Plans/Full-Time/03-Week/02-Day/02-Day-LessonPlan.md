@@ -432,7 +432,7 @@ By the end of class students will be able to:
 
   * You will work on creating this project tracker after the break, but let's take a sneak peak at some cool features here!
 
-  * When we click on Add Project, a modal opens up. When we get to the Due Date field, we see a calendar that pops up, which makes it easier for the user to choose a date.
+  * When we click on Add Project, a modal opens up. When we click on the calender icon within the Due Date field, we see a calendar that pops up, which makes it easier for the user to choose a date.
 
   * After we add a project, we can see how many days are left until the due date.
 
@@ -861,7 +861,7 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * `Day.js` has historically been the most popular date/time library but is no longer supported by its developers. It is still functional and widely used, which is why we are covering it in this activity. But feel free to explore other options!
 
-  * 🔑 We use `day().format()` to format dates and times. We can format the date and time in many ways.
+  * 🔑 We use `dayjs().format()` to format dates and times. We can format the date and time in many ways.
 
 * Open `25-Ins_Day-Format/index.html` in your browser and demonstrate the following:
 
@@ -876,13 +876,14 @@ Use [Google](https://www.google.com) or another search engine to research this.
   * First we need to create a Day object for today. We will use this in all of the answers. We can do so with the following code:
 
     ```js
-    var today = day();
+    var today = dayjs();
     ```
 
   * For the answer to the first question, we format the day object `today` to use `MMM D, YYYY` format:
 
   ```js
-    $("#1a").text(today.format("MMM D, YYYY"));
+    var gradDate = dayjs().format('MMM D, YYYY');
+    $('#1a').text(gradDate);
     ```
 
   * For the second question, we format `today` to say which day of the week it is using `dddd`:
@@ -895,8 +896,8 @@ Use [Google](https://www.google.com) or another search engine to research this.
   * For the third question, we parse the 11/3/2020 and reformat it into `dddd, MMMM D YYYY, h:mm:ss a` format:
 
     ```js
-    var reformatDate = day("11/3/20", "MM-DD-YY").format("dddd, MMMM D YYYY, h:mm:ss a");
-    $("#3a").text(reformatDate);
+    var reformatDate = dayjs('2020-11-03').format('dddd, MMMM D YYYY, h:mm:ss a');
+    $('#3a').text(reformatDate);
     ```
 
   * Lastly, we determine what week of the year we fall on right now, and use a `if/else` statement to determine if it is odd or even. Then we print to the screen a boolean along with the current week number:
@@ -986,10 +987,10 @@ If you have completed the activity and want to further your knowledge, work thro
     var weekDay = dayjs('01-01-2027', 'M-D-YYYY').format('dddd');
     ```
 
-  * 🔑 The next questions require us to format the current date and time. We use `day()` for the current date and time, then specify how we want to display it:
+  * 🔑 The next questions require us to format the current date and time. We use `dayjs()` for the current date and time, then specify how we want to display it:
 
     ```js
-    var dayYear = day().format("DDD");
+    var dayYear = dayjs().format("DDD");
 
     var time = dayjs().format('hh:mm:ss');
 
