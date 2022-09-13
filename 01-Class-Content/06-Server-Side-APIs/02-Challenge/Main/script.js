@@ -54,14 +54,12 @@ function initSearchHistory() {
 }
 
 // Function to display the current weather data fetched from OpenWeather api.
-function renderCurrentWeather(city, weather, timezone) {
-  var date = dayjs().tz(timezone).format('M/D/YYYY');
-
+function renderCurrentWeather(city, weather) {
+  var date = dayjs().format('M/D/YYYY');
   // Store response data from our fetch request in variables
-  var tempF = weather.temp;
-  var windMph = weather.wind_speed;
-  var humidity = weather.humidity;
-  var uvi = weather.uvi;
+  var tempF = weather.main.temp;
+  var windMph = weather.wind.speed;
+  var humidity = weather.main.humidity;
   var iconUrl = `https://openweathermap.org/img/w/${weather.weather[0].icon}.png`;
   var iconDescription = weather.weather[0].description || weather[0].main;
 
@@ -72,8 +70,6 @@ function renderCurrentWeather(city, weather, timezone) {
   var tempEl = document.createElement('p');
   var windEl = document.createElement('p');
   var humidityEl = document.createElement('p');
-  var uvEl = document.createElement('p');
-  var uviBadge = document.createElement('button');
 
   card.setAttribute('class', 'card');
   cardBody.setAttribute('class', 'card-body');
@@ -94,35 +90,19 @@ function renderCurrentWeather(city, weather, timezone) {
   humidityEl.textContent = `Humidity: ${humidity} %`;
   cardBody.append(heading, tempEl, windEl, humidityEl);
 
-  uvEl.textContent = 'UV Index: ';
-  uviBadge.classList.add('btn', 'btn-sm');
-
-  if (uvi < 3) {
-    uviBadge.classList.add('btn-success');
-  } else if (uvi < 7) {
-    uviBadge.classList.add('btn-warning');
-  } else {
-    uviBadge.classList.add('btn-danger');
-  }
-
-  uviBadge.textContent = uvi;
-  uvEl.append(uviBadge);
-  cardBody.append(uvEl);
-
   todayContainer.innerHTML = '';
   todayContainer.append(card);
 }
 
 // Function to display a forecast card given an object from open weather api
 // daily forecast.
-function renderForecastCard(forecast, timezone) {
+function renderForecastCard(forecast) {
   // variables for data from api
-  var unixTs = forecast.dt;
   var iconUrl = `https://openweathermap.org/img/w/${forecast.weather[0].icon}.png`;
   var iconDescription = forecast.weather[0].description;
-  var tempF = forecast.temp.day;
-  var { humidity } = forecast;
-  var windMph = forecast.wind_speed;
+  var tempF = forecast.main.temp;
+  var humidity = forecast.main.humidity;
+  var windMph = forecast.wind.speed;
 
   // Create elements for a card
   var col = document.createElement('div');
@@ -148,7 +128,7 @@ function renderForecastCard(forecast, timezone) {
   humidityEl.setAttribute('class', 'card-text');
 
   // Add content to elements
-  cardTitle.textContent = dayjs.unix(unixTs).tz(timezone).format('M/D/YYYY');
+  cardTitle.textContent = dayjs(forecast.dt_txt).format('M/D/YYYY');
   weatherIcon.setAttribute('src', iconUrl);
   weatherIcon.setAttribute('alt', iconDescription);
   tempEl.textContent = `Temp: ${tempF} °F`;
@@ -159,10 +139,10 @@ function renderForecastCard(forecast, timezone) {
 }
 
 // Function to display 5 day forecast.
-function renderForecast(dailyForecast, timezone) {
+function renderForecast(dailyForecast) {
   // Create unix timestamps for start and end of 5 day forecast
-  var startDt = dayjs().tz(timezone).add(1, 'day').startOf('day').unix();
-  var endDt = dayjs().tz(timezone).add(6, 'day').startOf('day').unix();
+  var startDt = dayjs().add(1, 'day').startOf('day').unix();
+  var endDt = dayjs().add(6, 'day').startOf('day').unix();
 
   var headingCol = document.createElement('div');
   var heading = document.createElement('h4');
@@ -173,20 +153,23 @@ function renderForecast(dailyForecast, timezone) {
 
   forecastContainer.innerHTML = '';
   forecastContainer.append(headingCol);
+
   for (var i = 0; i < dailyForecast.length; i++) {
-    // The api returns forecast data which may include 12pm on the same day and
-    // always includes the next 7 days. The api documentation does not provide
-    // information on the behavior for including the same day. Results may have
-    // 7 or 8 items.
+
+    // First filters through all of the data and returns only data that falls between one day after the current data and up to 5 days later.
     if (dailyForecast[i].dt >= startDt && dailyForecast[i].dt < endDt) {
-      renderForecastCard(dailyForecast[i], timezone);
+
+      // Then filters through the data and returns only data captured at noon for each day.
+      if (dailyForecast[i].dt_txt.slice(11, 13) == "12") {
+        renderForecastCard(dailyForecast[i]);
+      }
     }
   }
 }
 
 function renderItems(city, data) {
-  renderCurrentWeather(city, data.current, data.timezone);
-  renderForecast(data.daily, data.timezone);
+  renderCurrentWeather(city, data.list[0], data.city.timezone);
+  renderForecast(data.list);
 }
 
 // Fetches weather data for given location from the Weather Geolocation
@@ -195,7 +178,8 @@ function fetchWeather(location) {
   var { lat } = location;
   var { lon } = location;
   var city = location.name;
-  var apiUrl = `${weatherApiRootUrl}/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&exclude=minutely,hourly&appid=${weatherApiKey}`;
+
+  var apiUrl = `${weatherApiRootUrl}/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${weatherApiKey}`;
 
   fetch(apiUrl)
     .then(function (res) {
