@@ -28,7 +28,7 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
 * In the next module, we will explore the use of servers and Express.js on the back end of an application.
 
-* The next module will introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
+* We will also introduce students to Express.js and creating server-side routes. To test these routes, students will be use an app called Insomnia. Be sure to have Insomnia installed on your computer before class. To install, visit the [Insomnia installation page](https://insomnia.rest/download)
 
 * Students will also start using Heroku to host their web applications in the next module. Be sure to install the Heroku CLI on your computer. For extra guidance, you can follow the [Heroku CLI installation guide on the Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli). 
 
@@ -76,7 +76,9 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 
   * [Method overloading](https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/) 
 
-  * [git stash](https://www.git-scm.com/docs/git-stash) 
+  * [git stash](https://www.git-scm.com/docs/git-stash)
+
+  * [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

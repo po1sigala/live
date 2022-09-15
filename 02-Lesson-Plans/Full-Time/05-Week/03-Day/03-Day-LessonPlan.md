@@ -4,6 +4,8 @@
 
 In this class, we will start by doing the mini-project from Module 09 on Node.js. Then students will be introduced to object-oriented programming. They will learn about key OOP concepts like constructors, prototypes, polymorphism, and Promises.
 
+> **Important**: Ensure that all activities using the `inquirer` package is using version 8.2.4. The latest version of `inquirer` (version 9+) introduces breaking changes to activities. All activities have version 8.2.4 in their respective `package.json` files but should you or your students install `inquirer`, please use `npm i inquirer@8.2.4`.
+
 ## Instructor Notes
 
 * In this lesson, students will complete activities `28-Stu_Mini-Project` from Module 09 through `08-Stu_Promises` in Module 10.

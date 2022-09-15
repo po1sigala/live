@@ -28,6 +28,8 @@ You can use this [placeholder image](https://via.placeholder.com/200).
 
 How can you use header elements to define the most important heading and the subheaders? How will using different header elements impact the size of the text?
 
+Refer to the [Full-Stack Blog HTML Cheatsheet](https://coding-boot-camp.github.io/full-stack/html/html-cheatsheet)
+
 ## 🏆 Bonus
 
 If you have completed this activity, work through the following challenge with your partner to further your knowledge:

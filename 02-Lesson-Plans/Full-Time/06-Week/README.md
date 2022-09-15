@@ -29,7 +29,7 @@ Review the Roadmap for each module in Canvas for detailed information on key top
   * If Windows users get the `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/refman/8.0/en/mysql-installation-windows-path.html)
   mysql-installation-windows-path.html).
 
-* This week's Challenge uses MySQL, Node.js, and Inquirer to build a command line application. For a refresher on Inquirer, refer students to the [NPM documentation on Inquirer](https://www.npmjs.com/package/inquirer).
+* This week's Challenge uses MySQL, Node.js, and Inquirer to build a command line application. For a refresher on Inquirer, refer students to the [NPM documentation on Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4).
 
 ## Career Connection
 
@@ -98,6 +98,8 @@ Module 12:
 * [How to install the Heroku CLI](https://coding-boot-camp.github.io/full-stack/heroku/how-to-install-the-heroku-cli)
 
 * [Heroku Deployment Guide](https://coding-boot-camp.github.io/full-stack/heroku/heroku-deployment-guide)
+
+* [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
 
 * [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide)
 

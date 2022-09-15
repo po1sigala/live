@@ -48,9 +48,12 @@ app.delete('/delete', (req, res) => {
   db.collection('bookCollection').deleteOne(
     // This is the filter. We delete only the document that matches the _id provided in the request body,
     { _id: ObjectId(req.body.id) },
-    (err) => {
+    (err, results) => {
       if (err) throw err;
-      res.send("Document deleted");
+      console.log(results);
+      res.send(
+        results.deletedCount ? 'Document deleted' : 'No document found!'
+      );
     }
   );
 });

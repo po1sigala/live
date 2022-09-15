@@ -1050,15 +1050,16 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * In the server, note that the session object has a `cookie` attribute. This property is used by `express-session` to set various options for the session cookie.
 
-  * The `maxAge` attribute is set to `86400` milliseconds, meaning that the user has approximately one day until their cookie is expired:
+  * The `maxAge` attribute is set to `24 * 60 * 60 * 1000` milliseconds, meaning that the user has approximately one day until their cookie is expired:
 
-    > **Note**: In this demo, we specify a `maxAge`, but it is not necessary to do so. A default `maxAge` will be added automatically if you don't declare one.
+    > **Note**: In this demo, we specify a `maxAge`, but it is not necessary to do so. A default `maxAge` of `null` will be set automatically if you don't declare one.
 
     ```js
     const sess = {
       secret: 'Super secret secret',
       cookie: {
-        maxAge: 86400,
+        // Stored in milliseconds
+        maxAge: 24 * 60 * 60 * 1000, // expires after 1 day
       },
       resave: false,
       saveUninitialized: true,
@@ -1134,22 +1135,27 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ✔️ `connect-session-sequelize`
 
-  * ✔️ `cookie: {}`
+  * ✔️ `cookie: {...}`
 
   * ✔️ `SequelizeStore()`
 
 * Open `18-Stu_Cookies/Solved/server.js` in your IDE and explain the following:
 
-  * 🔑 To set up cookies, we first need to initialize Sequelize with the session store. To do that, we need to install and import `connect-session-sequelize`. The `connect-session-sequelize` library automatically stores the sessions created by `express-session` into the database! See the following code for an example:
+  * 🔑 To set up cookies for database sessions, we first need to initialize Sequelize with the session store. To do that, we need to install and import `connect-session-sequelize`. The `connect-session-sequelize` library automatically stores the sessions created by `express-session` into the database! See the following code for an example:
 
     ```js
     const SequelizeStore = require('connect-session-sequelize')(session.Store);
     ```
 
-  * 🔑 Then we set up an Express.js session like before, but this time we connect to the Sequelize database. We include the `secret`, `resave`, and `saveUninitialized` options as before. All we need to do to tell the session to use cookies is to set `cookie` to be `{}`. If we wanted to set additional options on the cookie, like a maximum age, we would add the options to that object, shown in the following example:
+  * 🔑 Then we set up an Express.js session like before, but this time we connect to the Sequelize database. We include the `secret`, `resave`, and `saveUninitialized` options as before. All we need to do to tell the session to use cookies is to set `cookie` as an object. We can set additional options on the cookie, like a maximum age, as shown in the following example:
 
     ```js
-    cookie: {}
+      cookie: {
+        maxAge: 60 * 60 * 1000,
+        httpOnly: true,
+        secure: false,
+        sameSite: 'strict',
+      },
     ```
 
   * 🔑 Lastly, we set `store` to a new Sequelize store and connect it to the database, as follows:

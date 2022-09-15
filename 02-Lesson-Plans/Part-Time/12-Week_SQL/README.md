@@ -14,11 +14,11 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
 * Make sure that students can initialize the MySQL command-line prompt using the command `mysql -u root -p`. They will need their MySQL password.
 
-  * If Mac users get a `command not found` error, set up a `.zshrc` file in your home directory and add the `mysql` command to it. To do this, navigate to the home directory and type the following command in the command line: `echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.zshrc`. Mac users who install using Homebrew should not face this issue. Refer to [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) for installation instructions.
+   * If Mac users get a `command not found` error, set up a `.zshrc` file in your home directory and add the `mysql` command to it. To do this, navigate to the home directory and type the following command in the command line: `echo 'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.zshrc`. Mac users who install using Homebrew should not face this issue. Refer to [MySQL Installation Guide](https://coding-boot-camp.github.io/full-stack/mysql/mysql-installation-guide) for installation instructions.
 
   * If Windows users get a `command not found` error, refer them to the [MySQL documentation on customizing the PATH](https://dev.mysql.com/doc/mysql-windows-excerpt/5.7/en/mysql-installation-windows-path.html).
 
-* For the Challenge this week, students will use MySQL, Node.js, and Inquirer to build a command-line application. For a refresher, refer students to the [npm documentation on Inquirer](https://www.npmjs.com/package/inquirer).
+* For the Challenge this week, students will use MySQL, Node.js, and Inquirer to build a command-line application. For a refresher, refer students to the [npm documentation on Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4).
 
 ## Career Connection
 
@@ -71,6 +71,8 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 * [MySQL documentation on getting started](https://dev.mysql.com/doc/mysql-getting-started/en/)
 
 * [npm documentation on MySQL2](https://www.npmjs.com/package/mysql2)
+
+* [Video Submission Guide](https://coding-boot-camp.github.io/full-stack/computer-literacy/video-submission-guide)
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.

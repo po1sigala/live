@@ -22,6 +22,8 @@ In this class, we will perform DOM manipulations that students are already famil
 
 * Let students know that the Bonus at the end of each activity is not meant to be extra coding practice but instead  is a self-study on topics beyond the scope of this module, for those who want to further their knowledge.
 
+* **Important**: Our curriculum currently uses Bootstrap v4.5! Please refer to the Bootstrap v4.5 [documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/) instead of `https://getbootstrap.com` as that will navigate to version 5+.
+
 ## Learning Objectives
 
 We will use jQuery to do the following:
