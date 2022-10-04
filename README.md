@@ -32,7 +32,7 @@ Have a suggestion or feedback? Please submit it through our [FullStack-Ground Fe
 
 Found a bug? [Log an Issue](https://github.com/coding-boot-camp/FullStack-Ground/issues).
 
-For emergencies, message the Full Stack Program Support Manager, `@Courtney Mathena`, in [#05-web-dev-course](https://trilogyed-instruction.slack.com/messages/C1073F9N0/).
+For emergencies, message the Full-Stack Curriculum Manager, `@Xander Rapstine`, in [#05-fullstack-live](https://trilogyed-instruction.slack.com/messages/C1073F9N0/).
 
 ---
 © 2022 Trilogy Education Services, LLC, a 2U, Inc. brand.  Confidential and Proprietary.  All Rights Reserved.
