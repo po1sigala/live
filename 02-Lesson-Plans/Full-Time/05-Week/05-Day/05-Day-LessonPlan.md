@@ -1059,7 +1059,7 @@ By the end of class, students will be able to:
 
   * You will build a command-line application that generates information about a software engineering team. The application will prompt the user for information about the team manager and then about the team members. 
 
-  * When you start the challenge, you will need to use Inquirer version 8.2.4. To do so, run this command in your project folder, `npm i inquirer@8.2.4`.
+  * When you start the Challenge, you will need to use Inquirer version 8.2.4. To do so, run the following command in your project folder: `npm i inquirer@8.2.4`.
   
   * When we run the application using `node index.js`, we will receive the following output from Inquirer: 
 
