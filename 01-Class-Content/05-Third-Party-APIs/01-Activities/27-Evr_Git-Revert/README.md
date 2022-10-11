@@ -91,7 +91,6 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
     $('#skills-list').sortable({
       placeholder: 'ui-state-highlight',
     });
-    $('#skills-list').disableSelection();
   });
   ```
 
