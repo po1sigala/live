@@ -91,7 +91,6 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
     $('#skills-list').sortable({
       placeholder: 'ui-state-highlight',
     });
-    $('#skills-list').disableSelection();
   });
   ```
 
@@ -147,5 +146,4 @@ In this activity, you will use `git revert` to undo a commit made earlier while 
 * For more information, review the [Git documentation on revert](https://git-scm.com/docs/git-revert).
 
 ---
-
 © 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

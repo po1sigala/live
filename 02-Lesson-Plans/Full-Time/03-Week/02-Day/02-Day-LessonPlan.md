@@ -733,13 +733,12 @@ Use [Google](https://www.google.com) or another search engine to answer this.
 
   * After we customize the sortable interaction code, the resulting code can be seen in `index.html`.
 
-  * Notice what the sortable function is doing&mdash;it is looking for an element with an id of `sortable` and applying the `.sortable()` function to it. Right afterwards, it will `.disableSelect()`:
+  * Notice what the sortable function is doing&mdash;it is looking for an element with an id of `sortable` and applying the `.sortable()` function to it:
 
     ```html
     <script>
       $(function () {
         $('#sortable').sortable();
-        $('#sortable').disableSelection();
       });
     </script>
     ```
@@ -825,7 +824,6 @@ Use [Google](https://www.google.com) or another search engine to research this.
     ```js
     $(function () {
       $('#skills-list').sortable();
-      $('#skills-list').disableSelection();
     });
     ```
 
@@ -836,7 +834,6 @@ Use [Google](https://www.google.com) or another search engine to research this.
       $('#skills-list').sortable({
         placeholder: 'ui-state-highlight',
       });
-        $('#skills-list').disableSelection();
     });
     ```
 
@@ -1125,7 +1122,6 @@ If you have completed the activity and want to further your knowledge, work thro
       $('#skills-list').sortable({
         placeholder: 'ui-state-highlight',
       });
-      $('#skills-list').disableSelection();
     });
     ```
 
