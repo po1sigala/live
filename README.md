@@ -28,9 +28,7 @@ You'll find grading rubrics, links to slide decks, and lesson plans organized by
 
 For information about onboarding and training, please consult your Onboarding course in Canvas. If you don't have access or a Canvas account, please email support@bootcampspot.com and provide your name and university.
 
-Have a suggestion or feedback? Please submit it through our [FullStack-Ground Feedback & Suggestions Survey](https://forms.gle/pRduJubbPK9fu22R7)
-
-Found a bug? [Log an Issue](https://github.com/coding-boot-camp/FullStack-Ground/issues).
+Have a suggestion or feedback? Found a bug? Please submit it through the [Boot Camp Feedback Form](https://forms.gle/ToLzuziG4CKbhtnj9).
 
 For emergencies, message the Full-Stack Curriculum Manager, `@Xander Rapstine`, in [#05-fullstack-live](https://trilogyed-instruction.slack.com/messages/C1073F9N0/).
 
