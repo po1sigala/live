@@ -55,4 +55,4 @@ In this activity, you will write code to create a function that takes in a strin
   * Functions that fail the tests will be denoted with a red x and an error message.
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
