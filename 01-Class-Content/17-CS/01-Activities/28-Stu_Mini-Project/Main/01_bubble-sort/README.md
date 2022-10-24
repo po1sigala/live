@@ -65,4 +65,4 @@ Use these prompts to help guide a candidate to a solution without giving away th
 * **Candidate Explains Solution**: Strong candidates will be able to explain that there is a need for a flag variable that let's a loop know if it's done or not. 
 
 - - -
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

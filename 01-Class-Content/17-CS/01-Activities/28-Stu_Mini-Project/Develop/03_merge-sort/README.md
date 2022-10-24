@@ -69,4 +69,4 @@ Here are some prompts an interviewer may ask to ensure you understand the proble
 * **Note:** If the machine running this algorithm is powerful enough, having a larger space complexity will be okay if it means a more stable time complexity of `O(n log(n))`. Other sorting algorithms take up less memory during execution but may take longer to complete.
 
 - - -
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

@@ -39,4 +39,4 @@
 * Time permitting, take this opportunity to discuss pure functions and the benefit of returning a new array versus mutating the old array.
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

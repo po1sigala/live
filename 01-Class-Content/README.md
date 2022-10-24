@@ -34,4 +34,4 @@ We’ll also cover computer science fundamentals, which are essential to web dev
 
 As a capstone to the boot camp, you’ll work in groups to build novel full-stack applications that solve real-world problems and use a wide swath of the languages and libraries you learned over the course of these past few months. We can’t wait to see what you build!
 
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

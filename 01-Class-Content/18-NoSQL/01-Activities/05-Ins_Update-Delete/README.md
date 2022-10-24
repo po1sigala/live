@@ -65,4 +65,4 @@ If you have not yet done so, please refer to [MongoDB docs on downloading and in
     ```
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
