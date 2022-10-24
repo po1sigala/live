@@ -38,6 +38,12 @@ In this class, students will outline their project presentations and complete wo
 
 * In the next module, students will start using Node.js. Advise the students to have Node.js installed before that module begins. Direct students to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
+* Because some of the technologies we use in this course do not work well with Node 18, we will lock into Node 16. Once these problems have been resolved, using Node v18 will be fine. 
+
+* MacOS use `homebrew` to lock into Node 16. 
+
+* Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/) to lock into Node 16
+
 ## Learning Objectives
 
 By the end of class, students will be able to:
