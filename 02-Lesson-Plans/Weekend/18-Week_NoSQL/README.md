@@ -71,4 +71,4 @@ This section contains links to this module's lesson plans, Challenge, slide deck
   * [Mongoose docs on getting started](https://mongoosejs.com/docs/index.html)
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
