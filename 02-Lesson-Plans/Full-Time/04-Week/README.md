@@ -42,9 +42,16 @@ Review the Roadmap for each module in Canvas for detailed information on key top
 
 ## Heads-Up
 
-* Before starting Module 09, make sure you install Node.js on your machine. Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
+* Before starting Module 09, make sure you install Node.js on your machine. 
+Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
-* Also, remind students have it installed prior to coming to class!
+* Because some of the technologies we use in this course do not work well with Node 18, we will lock into Node 16. Once these problems have been resolved, using Node v18 will be fine. 
+
+* MacOS use `homebrew` to lock into Node 16. 
+
+* Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/) to lock into Node 16
+
+* Also, remind students to have it installed prior to coming to class!
 
 * In Module 10, we begin Object-Oriented Programming, constructors, and classes. With that in mind, it's important to get students comfortable with ES6 and other Node.js fundamentals to prepare them for more abstract concepts.
 
