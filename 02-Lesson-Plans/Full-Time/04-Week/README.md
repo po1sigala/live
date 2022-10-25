@@ -47,7 +47,7 @@ Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-
 
 * Because some of the technologies we use in this course like GraphQL and MERN do not work well with Node 18, we will roll back to Node 16. Once these problems have been resolved, using Node v18 will be fine. 
 
-* MacOS use `homebrew` to lock into Node 16. 
+* MacOS use `brew install node@16` to lock into Node 16. 
 
 * Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/node-v16.18.0-x64.msi) to download and lock into Node 16.
 
