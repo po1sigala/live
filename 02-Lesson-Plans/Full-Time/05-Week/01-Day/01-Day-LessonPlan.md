@@ -14,9 +14,9 @@ This lesson introduces Node.js and the new syntax that comes with ES6. This incl
 
 **Important** Because some of the technologies we use in this course, like GraphQL and MERN don't work well with Node 18, we'll roll back to Node 16. Once these problems have been resolved, using Node 18 will be fine. 
 
-   * MacOS use `homebrew` to lock into Node 16. 
+   * For MacOS users, run `brew install node@16` in Terminal to lock into Node 16. 
 
-   * Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/node-v16.18.0-x64.msi) to download and lock into Node 16.
+   * For Windows users, download [this installer](https://nodejs.org/download/release/v16.18.0/node-v16.18.0-x64.msi) to lock into Node 16.
 
 * Transitioning from client-side to back-end development can be a little confusing at first. Remind students that Node.js is Chrome's V8 engine running on the machine rather than in the browser, giving us access to things like the file system.
 
