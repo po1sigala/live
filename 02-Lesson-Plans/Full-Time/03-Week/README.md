@@ -18,7 +18,9 @@ Review the Roadmap for each module in Canvas for detailed information on key top
 
 * In this module's classes, expect students to have many issues with jQuery syntax. Be encouraging and let them know that the syntax will seem more intuitive over time. For now, they should just try to utilize the syntax as is.
 
-* Student's will also gain their first exposure to Bootstrap, so be prepared for numerous questions surrounding that. Head over to the [Docs on Bootstrap](https://getbootstrap.com/docs/4.1/getting-started/introduction/) to familiarize yourself.
+* Student's will also gain their first exposure to Bootstrap, so be prepared for numerous questions surrounding that. Head over to the [Docs on Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) to familiarize yourself.
+
+* Note that all of our activities are using Bootstrap v5.1.3. Students may see references to Bootstrap v5.2 which is where `https://getbootstrap.com` defaults to. Although there doesn't appear to be many differences, please note that Bootstrap v5.2 is still in Beta at the time of writing this. All links within this lesson plan as well as student activities point towards Bootstrap v5.1 documentation.
 
 * Starting this module, slides will play a less prominent role. Warn students of this and let them know that their time spent coding is where real learning will happen.
 
@@ -98,13 +100,13 @@ Module 06:
 
 * [jQuery Event Delegation](https://learn.jquery.com/events/event-delegation/)
 
-* [Bootstrap Docs](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+* [Bootstrap Docs](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
 * [Google Fonts Docs](https://fonts.google.com)
 
 * [jQuery UI Docs](https://jqueryui.com/demos/)
 
-* [Moment.js Docs](https://momentjs.com/docs/)
+* [Day.js Docs](https://day.js.org/docs/en/display/format)
 
 * [How to Use API Keys](https://coding-boot-camp.github.io/full-stack/apis/how-to-use-api-keys)
 
@@ -123,4 +125,4 @@ Module 06:
 * [OpenWeather API documentation](https://openweathermap.org/api)
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

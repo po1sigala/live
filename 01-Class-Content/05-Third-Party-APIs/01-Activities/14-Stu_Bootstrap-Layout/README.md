@@ -12,9 +12,9 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
-[Bootstrap Documentation for the Grid](https://getbootstrap.com/docs/4.5/layout/grid/)
+[Bootstrap Documentation for the Grid](https://getbootstrap.com/docs/5.1/layout/grid/)
 
 ## Assets
 
@@ -35,5 +35,4 @@ If you have completed the activity and want to further your knowledge, work thro
 * What are some ways Chrome DevTools can demystify the CSS powering the grid? Use [Google](https://www.google.com) or another search engine to research this question.
 
 ---
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

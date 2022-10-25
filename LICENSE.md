@@ -7,4 +7,4 @@ As explained by [choosealicense.com](https://choosealicense.com/no-permission/),
 > [This repository] is under exclusive copyright by default. [You cannot] use, copy, distribute, or modify without being at risk of take-downs, shake-downs, or litigation.
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

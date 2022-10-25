@@ -51,4 +51,4 @@ This section contains links to this module's lesson plans, Challenge, slide deck
 * [Project Management with GitHub Project Boards](https://docs.github.com/en/github/managing-your-work-on-github/about-project-boards)
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

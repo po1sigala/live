@@ -33,4 +33,4 @@ Have a suggestion or feedback? Found a bug? Please submit it through the [Boot C
 For emergencies, message the Full-Stack Curriculum Manager, `@Xander Rapstine`, in [#05-fullstack-live](https://trilogyed-instruction.slack.com/messages/C1073F9N0/).
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand.  Confidential and Proprietary.  All Rights Reserved.
+© 2022 edX Boot Camps LLC.  Confidential and Proprietary.  All Rights Reserved.

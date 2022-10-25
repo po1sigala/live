@@ -44,7 +44,9 @@ Review the Roadmap for each module in Canvas for detailed information on key top
 
 * Before starting Module 09, make sure you install Node.js on your machine. Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
 
-* Also, remind students have it installed prior to coming to class!
+> **Important**: Because some of the technologies we use in this course like GraphQL and MERN do not work well with Node 18, we will roll back to Node 16. Once these problems have been resolved, using Node v18 will be fine. Follow this [link to our blog on how to install Node.](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs).
+
+* Also, remind students to have it installed prior to coming to class!
 
 * In Module 10, we begin Object-Oriented Programming, constructors, and classes. With that in mind, it's important to get students comfortable with ES6 and other Node.js fundamentals to prepare them for more abstract concepts.
 
@@ -85,4 +87,4 @@ This section contains links to this module's lesson plans, Challenge, slide deck
   * [Node.js](https://nodejs.org/en/)
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

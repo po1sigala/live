@@ -20,7 +20,7 @@ Work with a partner to implement the following user stories:
 
 Refer to the following documentation (look for Utilities in the left navigation menu): 
 
-[Bootstrap Documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+[Bootstrap Documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
 ## Assets
 
@@ -42,4 +42,4 @@ If you have completed the activity and want to further your knowledge, work thro
 
 ---
 
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

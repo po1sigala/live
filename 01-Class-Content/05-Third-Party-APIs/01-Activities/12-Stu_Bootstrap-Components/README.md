@@ -8,8 +8,6 @@ Work with a partner to implement the following user story:
 
 * It's done when the page has a styled navbar.
 
-* It's done when the page has a styled jumbotron.
-
 * It's done when the page has a styled and dismissible alert box.
 
 * It's done when the page has a styled form.
@@ -20,9 +18,9 @@ Work with a partner to implement the following user story:
 
 ## 📝 Notes
 
-Refer to the following documentation: 
+Refer to the following documentation:
 
-[Bootstrap Documentation for Components](https://getbootstrap.com/docs/4.5/components/)
+[Bootstrap Documentation for Components](https://getbootstrap.com/docs/5.1/components/)
 
 ## Assets
 
@@ -45,5 +43,4 @@ If you have completed the activity and want to further your knowledge, work thro
 * How did Bootstrap come to be, and how are CSS frameworks like it useful for developers? Use [Google](https://www.google.com) or another search engine to research this question.
 
 ---
-
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

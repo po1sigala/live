@@ -67,4 +67,4 @@ Use these prompts to help guide a candidate to a solution without giving away th
 * **Candidate Explains Solution**: Because the array was sorted to the left and right of the pivot value, we can insert it between the two using array concatenation and assume it'll be greater than (or equal to) anything in the left array and less than anything in the right array.
 
 - - -
-© 2020 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

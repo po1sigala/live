@@ -23,4 +23,4 @@ In this mini-project, you and a partner will simulate a technical interview by t
 * Take this seriously, but don't put too much pressure on yourself to get to an answer! The idea is to be conversational about these questions to help both of you come to a solution that you can understand and explain in an interview setting.
 
 ---
-© 2022 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
