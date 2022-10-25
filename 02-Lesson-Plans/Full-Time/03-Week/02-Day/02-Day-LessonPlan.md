@@ -2,17 +2,15 @@
 
 ## Overview
 
-This class introduces Bootstrap utilities and how to extend Bootstrap. Student's will also learn about Google Fonts. Students will rely heavily on documentation to make use of utility classes and they will customize those pages with Google Fonts and CSS. Students will also implement jQuery UI&mdash;specifically widgets and interactions&mdash;to make a webpage more user-friendly. Students will also learn about formatting dates using Moment.js. Also, `git revert` will be covered today as a part of the continuing education on Git.
+This class introduces Bootstrap utilities and how to extend Bootstrap. Student's will also learn about Google Fonts. Students will rely heavily on documentation to make use of utility classes and they will customize those pages with Google Fonts and CSS. Students will also implement jQuery UI&mdash;specifically widgets and interactions&mdash;to make a webpage more user-friendly. Students will also learn about formatting dates using Day.js. Also, `git revert` will be covered today as a part of the continuing education on Git.
 
 ## Instructor Notes
 
 * In this lesson, students will complete activities `15-Ins_Bootstrap Utilities` through `27-Evr_Git-Revert`.
 
-* The `26-Stu_Moment-Format` activity uses the `Moment.js` library to format dates and time. Let the students know that `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. It is still functional, which is why we are covering it in class. Feel free to encourage students to explore other options such as [Luxon](https://moment.github.io/luxon/), [Day.js](https://day.js.org/), [date-fns](https://date-fns.org/), and [js-Joda](https://js-joda.github.io/js-joda/).
+* Take a few minutes before class to get familiar with both the [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) and [Google Fonts](https://fonts.google.com/) documentation, as students will rely heavily on these resources in class and might need a nudge in finding answers.
 
-* Take a few minutes before class to get familiar with both the [Bootstrap](https://getbootstrap.com/docs/4.5/getting-started/introduction/) and [Google Fonts](https://fonts.google.com/) documentation, as students will rely heavily on these resources in class and might need a nudge in finding answers.
-
-* **Important**: Our curriculum currently uses Bootstrap v4.5! Please refer to the Bootstrap v4.5 [documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/) instead of `https://getbootstrap.com` as that will navigate to version 5+.
+* Note that all of our activities are using Bootstrap v5.1.3. Students may see references to Bootstrap v5.2 which is where `https://getbootstrap.com` defaults to. Although there doesn't appear to be many differences, please note that Bootstrap v5.2 is still in Beta at the time of writing this. All links within this lesson plan as well as student activities point towards Bootstrap v5.1 documentation.
 
 * Be sure to prepare and read over the activities before your class begins. Try to anticipate any questions students might have.
 
@@ -42,7 +40,7 @@ By the end of class students will be able to:
 
 * Implement jQuery UI interactions to create sortable lists.
 
-* Use Moment.js to calculate time differences.
+* Use Day.js to calculate time differences.
 
 * Apply the inverse of a commit by using `git revert`.
 
@@ -68,9 +66,9 @@ By the end of class students will be able to:
 | 1:10PM | 16  | Instructor Demo: jQuery UI Interactions    | 0:05     |
 | 1:15PM | 17  | Student Do: jQuery UI Interactions         | 0:15     |
 | 1:30PM | 18  | Instructor Review: jQuery UI Interactions  | 0:10     |
-| 1:40PM | 19  | Instructor Demo: Moment.js Format          | 0:05     |
-| 1:45PM | 20  | Student Do: Moment.js Format               | 0:15     |
-| 2:00PM | 21  | Instructor Review: Moment.js Format        | 0:10     |
+| 1:40PM | 19  | Instructor Demo: Day.js Format             | 0:05     |
+| 1:45PM | 20  | Student Do: Day.js Format                  | 0:15     |
+| 2:00PM | 21  | Instructor Review: Day.js Format           | 0:10     |
 | 2:10PM | 22  | Everyone Do: Git                           | 0:20     |
 | 2:30PM | 23  | END                                        | 0:00     |
 
@@ -129,7 +127,7 @@ By the end of class students will be able to:
 
   Refer to the following documentation (look for Utilities in the left navigation menu):
 
-  [Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/)
+  [Bootstrap documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 
   ## Assets
 
@@ -192,7 +190,7 @@ By the end of class students will be able to:
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation](https://getbootstrap.com/docs/4.5/getting-started/introduction/), and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Bootstrap documentation](https://getbootstrap.com/docs/5.1/getting-started/introduction/), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -388,7 +386,7 @@ By the end of class students will be able to:
 
   * ✔️ Use the `<link>` provided.
 
-  * ✔️ Don't pick too many fonts or , for performance reasons.
+  * ✔️ Don't pick too many fonts or variations, for performance reasons.
 
 * Open `20-Stu_Google-Fonts/Solved/index.html` in your IDE and explain the following:
 
@@ -434,11 +432,11 @@ By the end of class students will be able to:
 
   * You will work on creating this project tracker after the break, but let's take a sneak peak at some cool features here!
 
-  * When we click on Add Project, a modal opens up. When we get to the Due Date field, we see a calendar that pops up, which makes it easier for the user to choose a date.
+  * When we click on Add Project, a modal opens up. When we click on the calendar icon within the Due Date field, we see a calendar that pops up, which makes it easier for the user to choose a date.
 
   * After we add a project, we can see how many days are left until the due date.
 
-  * Datepicker is a jQuery UI widget, and Moment.js calculates the days until the due date. We will learn more about both of these tools today!
+  * Datepicker is a jQuery UI widget, and DayJS calculates the days until the due date. We will learn more about both of these tools today!
 
 ## 13. Instructor Demo: jQuery UI Widgets (5 min)
 
@@ -473,8 +471,7 @@ By the end of class students will be able to:
 
     ```html
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"
     />
     ```
 
@@ -855,34 +852,35 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
 * Answer any questions before proceeding to the next activity.
 
-## 19. Instructor Demo: Moment.js Format (5 min)
+## 19. Instructor Demo: Day.js Format (5 min)
 
-* Open the [Moment.js documentation on format](https://momentjs.com/docs/#/displaying/) in your browser and explain the following:
+* Open the [Day.js documentation on format](https://day.js.org/docs/en/display/format) in your browser and explain the following:
 
-  * `Moment.js` has historically been the most popular date/time library but is no longer supported by its developers. It is still functional and widely used, which is why we are covering it in this activity. But feel free to explore other options!
+  * `Day.js` has historically been the most popular date/time library but is no longer supported by its developers. It is still functional and widely used, which is why we are covering it in this activity. But feel free to explore other options!
 
-  * 🔑 We use `moment().format()` to format dates and times. We can format the date and time in many ways.
+  * 🔑 We use `dayjs().format()` to format dates and times. We can format the date and time in many ways.
 
-* Open `25-Ins_Moment-Format/index.html` in your browser and demonstrate the following:
+* Open `25-Ins_Day-Format/index.html` in your browser and demonstrate the following:
 
   * 🔑 We see questions about the date and time, and they are answered according to the current date and time.
 
-* Open `25-Ins_Moment-Format/index.html` in your IDE and observe the following:
+* Open `25-Ins_Day-Format/index.html` in your IDE and observe the following:
 
   * Here we only see the questions printed to the screen. The answers were calculated in `script.js`.
 
-* Open `25-Ins_Moment-Format/assets/js/script.js` in your IDE and explain the following:
+* Open `25-Ins_Day-Format/assets/js/script.js` in your IDE and explain the following:
 
-  * First we need to create a Moment object for today. We will use this in all of the answers. We can do so with the following code:
+  * First we need to create a day object for today. We will use this in all of the answers. We can do so with the following code:
 
     ```js
-    var today = moment();
+    var today = dayjs();
     ```
 
-  * For the answer to the first question, we format the moment object `today` to use `MM Do, YYYY` format:
+  * For the answer to the first question, we format the day object `today` to use `MMM D, YYYY` format:
 
   ```js
-    $("#1a").text(today.format("MMM Do, YYYY"));
+    var gradDate = dayjs().format('MMM D, YYYY');
+    $('#1a').text(gradDate);
     ```
 
   * For the second question, we format `today` to say which day of the week it is using `dddd`:
@@ -892,24 +890,20 @@ Use [Google](https://www.google.com) or another search engine to research this.
     $("#2a").text(dayWeek);
     ```
 
-  * For the third question, we parse the 11/3/2020 and reformat it into `dddd, MMMM Do YYYY, h:mm:ss a` format:
+  * For the third question, we parse the 11/3/2020 and reformat it into `dddd, MMMM D YYYY, h:mm:ss a` format:
 
     ```js
-    var reformatDate = moment("11/3/20", "MM-DD-YY").format("dddd, MMMM Do YYYY, h:mm:ss a");
-    $("#3a").text(reformatDate);
+    var reformatDate = dayjs('2020-11-03').format('dddd, MMMM D YYYY, h:mm:ss a');
+    $('#3a').text(reformatDate);
     ```
 
-  * Lastly, we determine what week of the year we fall on right now, and use a `if/else` statement to determine if it is odd or even. Then we print to the screen a boolean along with the current week number:
+  * Lastly, we determine what week of the year we fall on right now, and use an `if/else` statement to determine if it is odd or even. Then we print to the screen a boolean along with the current week number:
 
     ```js
-    var weekNum = today.format("w");
-    var takeOut;
-    // Check odd, then assign boolean
-    if(weekNum % 2) {
-      takeOut = true;
-    } else {
-      takeOut = false;
-    }
+    var beginningOfYear = dayjs('2022-01-01');
+    var weekNum = today.diff(beginningOfYear, 'week');
+    // Check for odd week, then assign boolean to variable
+    var takeOut = weekNum % 2 === 1;
 
     $("#4a").text(takeOut + ", because it's currently week " + weekNum);
     ```
@@ -918,15 +912,15 @@ Use [Google](https://www.google.com) or another search engine to research this.
 
   * ☝️ How would we build this?
 
-  * 🙋 We will need to read the Moment.js documentation to figure out how to use Moment.js to format the date and time.
+  * 🙋 We will need to read the Day.js documentation to figure out how to use Day.js to format the date and time.
 
 * Answer any questions before proceeding to the next activity.
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Moment-Format/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `26-Stu_Day-Format/README.md`.
 
-### 20. Student Do: Moment.js Format (15 min)
+### 20. Student Do: Day.js Format (15 min)
 
-* Direct students to the activity instructions found in `26-Stu_Moment-Format/README.md`.
+* Direct students to the activity instructions found in `26-Stu_Day-Format/README.md`.
 
 * Break your students into pairs that will work together on this activity.
 
@@ -939,19 +933,17 @@ Work with a partner to implement the following user story:
 
 ## Acceptance Criteria
 
-* It's done when every question prompt on the page is correctly answered and displayed in the correct format using Moment.js.
+* It's done when every question prompt on the page is correctly answered and displayed in the correct format using Day.js.
 
 ## 📝 Notes
 
 Refer to the following documentation:
 
-[Moment.js Docs](https://momentjs.com/docs/#/displaying/)
-
-**Note**: `Moment.js` has historically been the most popular date/time library, but is now no longer supported by its developers. It is still functional and widely used, which is why we are introducing it through this module.
+[Day.js Docs](https://day.js.org/docs/en/display/format)
 
 ## 💡 Hints
 
-* Refer to the official [Moment.js docs on parsing](https://momentjs.com/docs/#/parsing/) to format ISO 8601 strings.
+* Refer to the official [Day.js docs on parsing](https://day.js.org/docs/en/parse/parse) to format ISO 8601 strings.
 
 * Follow the instructions provided by the comments in the starter code to format the date that answers the questions and assign them to the declared variable provided.
 
@@ -961,16 +953,16 @@ Refer to the following documentation:
 
 If you have completed the activity and want to further your knowledge, work through the following challenge with your partner:
 
-* How can we measure the difference between two time stamps with `Moment.js`? Read the [Moment.js Docs](https://momentjs.com/docs/) to research how this works.
+* How can we measure the difference between two time stamps with `Day.js`? Read the [Day.js Docs](https://day.js.org/docs/en/manipulate/manipulate) to research how this works.
 ```
 
 * While breaking everyone into groups, be sure to remind students and instructional staff that questions on Slack or otherwise are welcome and will be handled. It's a good way for your team to prioritize students that need extra help.
 
-### 21. Instructor Review: Moment.js Format (10 min)
+### 21. Instructor Review: Day.js Format (10 min)
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
-  * ☝️ How comfortable do you feel with Moment.js? (Poll via Fist to Five, Slack, or Zoom)
+  * ☝️ How comfortable do you feel with Day.js? (Poll via Fist to Five, Slack, or Zoom)
 
 * Assure students that we will cover the solution to help solidify their understanding. If questions remain, remind them to use office hours to get extra help!
 
@@ -982,41 +974,41 @@ If you have completed the activity and want to further your knowledge, work thro
 
   * ✔️ Formatting Unix timestamp
 
-* Open `26-Stu_Moment-Format/Solved/assets/js/script.js` in your IDE and explain the following:
+* Open `26-Stu_Day-Format/Solved/assets/js/script.js` in your IDE and explain the following:
 
   * 🔑 The first two questions require us to format a given date. We parse the date that needs to be reformatted and then specify how we want to display the date. We could've used any date for the graduation date. The code will look something like the following example:
 
     ```js
-    var gradDate = moment("2021-06-15").format("MMM Do, YYYY");
+    var gradDate = dayjs('2023-06-15').format('MMM D, YYYY');
 
-    var weekDay = moment("1-1-2022", "M-D-YYYY").format("ddd MMM Do, YYYY");
+    var weekDay = dayjs('01-01-2027', 'M-D-YYYY').format('dddd');
     ```
 
-  * 🔑 The next questions require us to format the current date and time. We use `moment()` for the current date and time, then specify how we want to display it:
+  * 🔑 The next questions require us to format the current date and time. We use `dayjs()` for the current date and time, then specify how we want to display it:
 
     ```js
-    var dayYear = moment().format("DDD");
+    var dayYear = dayjs().format("DDD");
 
-    var time = moment().format("hh:mm:ss");
+    var time = dayjs().format('hh:mm:ss');
 
-    var unix = moment().format("X");
+    var unix = dayjs().unix();
     ```
 
   * For the last question, we had to parse the Unix timestamp and convert it to date and time:
 
     ```js
-    var unixFormat = moment.unix(1318781876).format("MMM Do, YYYY, hh:mm:ss");
+    var unixFormat = dayjs.unix(1318781876).format('MMM D, YYYY, hh:mm:ss a');
     ```
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How can we add words other than the formatted date to be displayed on the screen?
 
-  * 🙋 We can use `[]` brackets. For example, if today is Saturday, then `moment().format("[Today is] dddd")` will display the full string "Today is Saturday".
+  * 🙋 We can use `[]` brackets. For example, if today is Saturday, then `day().format("[Today is] dddd")` will display the full string "Today is Saturday".
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [Moment.js Documentation](https://momentjs.com/docs/), and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [Day.js Documentation](https://day.js.org/docs/en/display/format), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 

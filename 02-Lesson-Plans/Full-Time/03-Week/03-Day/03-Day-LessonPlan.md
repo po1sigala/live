@@ -77,7 +77,7 @@ By the end of class students will be able to
 
   * ☝️ How would we build this, working in groups of three to four?
 
-  * 🙋 We will break up the different tasks amongst the group members and try to finish at least the first three tasks. We need to create an `index.html` file for the HTML and a `script.js` file for the JavaScript and jQuery. When in doubt, we can refer to the official documentation for Bootstrap, jQuery, jQueryUI, Moment, and Google Fonts.
+  * 🙋 We will break up the different tasks amongst the group members and try to finish at least the first three tasks. We need to create an `index.html` file for the HTML and a `script.js` file for the JavaScript and jQuery. When in doubt, we can refer to the official documentation for Bootstrap, jQuery, jQueryUI, DayJS, and Google Fonts.
 
 * Answer any questions before allowing students to start the mini-project.
 
@@ -91,7 +91,7 @@ By the end of class students will be able to
 
 # Module 05 Mini-Project: Project Tracker
 
-In this project, you will work with others to create a project tracker application using Bootstrap, jQuery, jQueryUI, Moment, and Google Fonts. Break up these phases amongst members of your team.
+In this project, you will work with others to create a project tracker application using Bootstrap, jQuery, jQueryUI, DayJS, and Google Fonts. Break up these phases amongst members of your team.
 
 ## Instructions
 
@@ -99,9 +99,9 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
 ### Task 1: HTML Build
 
-1. Create a header/hero area that welcomes users to the application and displays the current time and date using Moment.js with `setInterval()`.
+1. Create a header/hero area that welcomes users to the application and displays the current time and date using Day.js with `setInterval()`.
 
-2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/4.5/components/modal/).
+2. Create a Bootstrap card component explaining the instructions of how to use the app and a button to open a [Bootstrap modal dialog](https://getbootstrap.com/docs/5.1/components/modal/).
 
 3. The modal should contain a form asking users to fill in the following data:
 
@@ -123,7 +123,7 @@ This mini-project is divided into four tasks. The first three tasks will get you
 
   * Due date
 
-  * Days until the due date (use Moment.js to calculate)
+  * Days until the due date (use Day.js to calculate)
 
   * Estimated total earned (hourly wage at 8 hours per day multiplied by the number of days until the due date)
 
@@ -157,7 +157,7 @@ While you build, remember the following guidelines:
 
 3. Create a table detail (`<td>`) element for each of the table columns created in Task 1.
 
-4. For printing the days to the due date, use Moment.js to calculate the difference between the due date and the current time in days. 
+4. For printing the days to the due date, use Day.js to calculate the difference between the due date and the current time in days. 
 
 5. For printing the estimated total earned amount, assume that you work an eight-hour day. So multiply the hourly rate by 8 to get the daily rate, then multiply that value by how many days until the project is due to get the estimated total earned. 
 
@@ -192,7 +192,7 @@ While you build, remember the following guidelines:
 
   * ✔️ Capture form content
 
-  * ✔️ Moment.js time differences
+  * ✔️ Day.js time differences
 
   * ✔️ jQuery event delegation
 
@@ -202,82 +202,150 @@ While you build, remember the following guidelines:
 
   * 🔑 We can find the general code for the modal in the official documentation for Bootstrap modals. In the modal, we will put in a form. Notice the id for the input fields, shown in the following example:
 
-    ```js
-    <div class="form-group">
-      <label for="project-name-input">Project Name</label>
-      <input type="text" id="project-name-input" class="form-control" placeholder="Enter the project's name"
-        required />
-    </div>
-
-    <div class="form-group">
-      <label for="project-type-input">Project Type</label>
-      <select class="form-control" id="project-type-input">
-        <option selected disabled>Pick one...</option>
-        <option value="Web Application (Front End)">Web Application (Front End)</option>
-        <option value="Web Application (Back End)">Web Application (Back End)</option>
-        <option value="Web Application (Full Stack)">Web Application (Full Stack)</option>
-        <option value="Mobile Application">Mobile Application</option>
-        <option value="Print Campaign">Print Campaign</option>
-        <option value="Digital Marketing Campaign">Digital Marketing Campaign</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="hourly-rate-input">Hourly Rate ($)</label>
-      <input type="number" id="hourly-rate-input" class="form-control" placeholder="$" min="0" required />
-    </div>
-
-    <div class="form-group">
-      <label for="due-date-input">Due Date</label>
-      <input type="text" min='1' id="due-date-input" class="form-control" placeholder="When is the project due?"
-        required />
-    </div>
+    ```html
+         <div
+      class="modal fade"
+      id="new-project-modal"
+      tabindex="-1"
+      aria-labelledby="new-project-modal-label"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <form id="project-form">
+            <div class="modal-header custom-modal-header">
+              <h5 class="modal-title" id="new-project-modal-label">
+                Add a new project
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="mb-3">
+                <label for="project-name-input">Project Name</label>
+                <input
+                  type="text"
+                  id="project-name-input"
+                  class="form-control"
+                  placeholder="Enter the project's name"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="project-type-input" class="form-label"
+                  >Project Type</label
+                >
+                <select id="project-type-input" class="form-select">
+                  <option value="Web Application (Front End)">
+                    Web Application (Front End)
+                  </option>
+                  <option value="Web Application (Back End)">
+                    Web Application (Back End)
+                  </option>
+                  <option value="Web Application (Full Stack)">
+                    Web Application (Full Stack)
+                  </option>
+                  <option value="Mobile Application">Mobile Application</option>
+                  <option value="Print Campaign">Print Campaign</option>
+                  <option value="Digital Marketing Campaign">
+                    Digital Marketing Campaign
+                  </option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="project-date-input">Due Date</label>
+                <input
+                  type="date"
+                  id="project-date-input"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <!--
+                The data-bs-dismiss attribute tells Bootstrap to hide the <div
+                class="modal-footer"> element on click.
+              -->
+              <button
+                type="button"
+                class="btn btn-outline-secondary"
+                data-bs-dismiss="modal"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="btn btn-custom"
+                data-bs-dismiss="modal"
+              >
+                Add Project
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     ```
 
-  * 🔑 We can see how we capture the form content by looking at the function for handling the form submit in `script.js`:
+* 🔑 We can see how we capture the form content by looking at the function for handling the form submit in `script.js`:
 
     ```js
+    var timeDisplayEl = $('#time-display');
+    var projectDisplayEl = $('#project-display');
+    var projectFormEl = $('#project-form');
     var projectNameInputEl = $('#project-name-input');
     var projectTypeInputEl = $('#project-type-input');
-    var hourlyRateInputEl = $('#hourly-rate-input');
-    var dueDateInputEl = $('#due-date-input');
-
+    var projectDateInputEl = $('#project-date-input');
+    
     function handleProjectFormSubmit(event) {
       event.preventDefault();
-
+      // read user input from the form
       var projectName = projectNameInputEl.val().trim();
-      var projectType = projectTypeInputEl.val().trim();
-      var hourlyRate = hourlyRateInputEl.val().trim();
-      var dueDate = dueDateInputEl.val().trim();
-
-      printProjectData(projectName, projectType, hourlyRate, dueDate);
-
-      projectFormEl[0].reset();
+      var projectType = projectTypeInputEl.val(); // don't need to trim select input
+      var projectDate = projectDateInputEl.val(); // yyyy-mm-dd format
+      var newProject = {
+        name: projectName,
+        type: projectType,
+        date: projectDate,
+      };
+      // add project to local storage
+      var projects = readProjectsFromStorage();
+      projects.push(newProject);
+      saveProjectsToStorage(projects);
+      // print project data
+      printProjectData();
+      // clear the form inputs
+      projectNameInputEl.val('');
+      projectTypeInputEl.val('');
+      projectDateInputEl.val('');
     }
     ```
 
-  * 🔑 We use Moment.js to format the time and calculate the difference between now and the due date:
+  * 🔑 We use Day.js to format the time and calculate the difference between now and the due date:
 
     ```js
     function displayTime() {
-      var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+      var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
       timeDisplayEl.text(rightNow);
     }
-
-    var daysToDate = moment(dueDate, 'MM/DD/YYYY').diff(moment(), 'days');
     ```
 
   * 🔑 And finally, in Task 4, when we delete a project from the table, we are attaching an event listener to a button for each `<tr>`. When it is clicked, that `<tr>` element will be removed from the page:
 
     ```js
-    // In printProjectData()
-    var deleteProjectBtn = $('<td>').addClass('p-2 delete-project-btn text-center').text('X');
-
-    // Remove <tr> when button is clicked
-    function handleDeleteProject(event) {
-      console.log(event.target);
-      var btnClicked = $(event.target);
-      btnClicked.parent('tr').remove();
+    // Removes a project from local storage and prints the project data
+    function handleDeleteProject() {
+      var projectIndex = parseInt($(this).attr('data-index'));
+      var projects = readProjectsFromStorage();
+      // remove project from the array
+      projects.splice(projectIndex, 1);
+      saveProjectsToStorage(projects);
+      // print projects
+      printProjectData();
     }
     ```
 
@@ -285,11 +353,11 @@ While you build, remember the following guidelines:
 
   * ☝️ How are we printing the time to the page every second in the header?
 
-  * 🙋 We are using `setInterval()` to call the function `displayTime()`, which uses Moment.js to format the current time and appends it to the page, every second. 
+  * 🙋 We are using `setInterval()` to call the function `displayTime()`, which uses Days.js to format the current time and appends it to the page, every second.
 
   * ☝️ What can we do if we don't completely understand this?
 
-  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) or the [Bootstrap documentation on components](https://getbootstrap.com/docs/4.5/components/modal/), and stay for office hours to ask for help.
+  * 🙋 We can refer to supplemental material, read the [MDN Web Docs on the HTML input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) or the [Bootstrap documentation on components](https://getbootstrap.com/docs/5.1/components/modal/), and stay for office hours to ask for help.
 
 * Answer any questions before proceeding to the next activity.
 
@@ -307,11 +375,11 @@ While you build, remember the following guidelines:
 
   * ☝️ What are we learning?
 
-  * 🙋 We are learning to use HTML and CSS powered by jQuery. We are also using Moment.js to work with the date and time.
+  * 🙋 We are learning to use HTML and CSS powered by jQuery. We are also using Day.js to work with the date and time.
 
   * ☝️ How does this project build off or extend previously learned material?
 
-  * 🙋 It is using HTML, CSS, and JavaScript skills, as well as the newly learned Moment.js library and Bootstrap.
+  * 🙋 It is using HTML, CSS, and JavaScript skills, as well as the newly learned Day.js library and Bootstrap.
 
   * ☝️ How does this project relate to your career goals?
 
@@ -325,7 +393,7 @@ While you build, remember the following guidelines:
 
 * This time can be utilized for reviewing key topics learned so far in this module.
 
-* If there were any activities that you needed to cut short due to time constraints, this is a perfect time to review them. 
+* If there were any activities that you needed to cut short due to time constraints, this is a perfect time to review them.
 
 * Ask the class if there is anything they would like to review before moving on to Module 06.
 
@@ -343,11 +411,11 @@ While you build, remember the following guidelines:
 
   * **Boot Camp Pointers**
 
-    * Students are routinely challenged during class and Challenge assignments. Remind them that they’re not alone through the grind! Ask them to rely on their support systems more readily as they start reaching the second phase of the program. 
+    * Students are routinely challenged during class and Challenge assignments. Remind them that they’re not alone through the grind! Ask them to rely on their support systems more readily as they start reaching the second phase of the program.
 
   * **This Week: Server-Side APIs**
 
-    * Walk through the learning objectives for the week with your class. These are the things they should expect to know by the end of the module. 
+    * Walk through the learning objectives for the week with your class. These are the things they should expect to know by the end of the module.
 
   * **This Week's Assignment**
 
