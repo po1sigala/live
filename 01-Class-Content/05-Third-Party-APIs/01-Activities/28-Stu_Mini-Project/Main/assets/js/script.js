@@ -1,89 +1,124 @@
 // save reference to important DOM elements
 var timeDisplayEl = $('#time-display');
 var projectDisplayEl = $('#project-display');
-var projectModalEl = $('#project-modal');
 var projectFormEl = $('#project-form');
 var projectNameInputEl = $('#project-name-input');
 var projectTypeInputEl = $('#project-type-input');
-var hourlyRateInputEl = $('#hourly-rate-input');
-var dueDateInputEl = $('#due-date-input');
+var projectDateInputEl = $('#project-date-input');
 
 // handle displaying the time
 function displayTime() {
-  var rightNow = moment().format('MMM DD, YYYY [at] hh:mm:ss a');
+  var rightNow = dayjs().format('MMM DD, YYYY [at] hh:mm:ss a');
   timeDisplayEl.text(rightNow);
 }
 
-// handle printing project data to the page
-function printProjectData(name, type, hourlyRate, dueDate) {
-  var projectRowEl = $('<tr>');
-
-  var projectNameTdEl = $('<td>').addClass('p-2').text(name);
-
-  var projectTypeTdEl = $('<td>').addClass('p-2').text(type);
-
-  var rateTdEl = $('<td>').addClass('p-2').text(hourlyRate);
-
-  var dueDateTdEl = $('<td>').addClass('p-2').text(dueDate);
-
-  var daysToDate = moment(dueDate, 'MM/DD/YYYY').diff(moment(), 'days');
-  var daysLeftTdEl = $('<td>').addClass('p-2').text(daysToDate);
-
-  var totalEarnings = calculateTotalEarnings(hourlyRate, daysToDate);
-
-  // You can also chain methods onto new lines to keep code clean
-  var totalTdEl = $('<td>')
-    .addClass('p-2')
-    .text('$' + totalEarnings);
-
-  var deleteProjectBtn = $('<td>')
-    .addClass('p-2 delete-project-btn text-center')
-    .text('X');
-
-  // By listing each `<td>` variable as an argument, each one will be appended in that order
-  projectRowEl.append(
-    projectNameTdEl,
-    projectTypeTdEl,
-    rateTdEl,
-    dueDateTdEl,
-    daysLeftTdEl,
-    totalTdEl,
-    deleteProjectBtn
-  );
-
-  projectDisplayEl.append(projectRowEl);
-
-  projectModalEl.modal('hide');
+// Reads projects from local storage and returns array of project objects.
+// Returns an empty array ([]) if there aren't any projects.
+function readProjectsFromStorage() {
+  var projects = localStorage.getItem('projects');
+  if (projects) {
+    projects = JSON.parse(projects);
+  } else {
+    projects = [];
+  }
+  return projects;
 }
 
-function calculateTotalEarnings(rate, days) {
-  var dailyTotal = rate * 8;
-  var total = dailyTotal * days;
-  return total;
+// Takes an array of projects and saves them in localStorage.
+function saveProjectsToStorage(projects) {
+  localStorage.setItem('projects', JSON.stringify(projects));
 }
 
-function handleDeleteProject(event) {
-  console.log(event.target);
-  var btnClicked = $(event.target);
-  btnClicked.parent('tr').remove();
+// Gets project data from local storage and displays it
+function printProjectData() {
+  // clear current projects on the page
+  projectDisplayEl.empty();
+
+  // get projects from localStorage
+  var projects = readProjectsFromStorage();
+
+  // loop through each project and create a row
+  for (var i = 0; i < projects.length; i += 1) {
+    var project = projects[i];
+    var projectDate = dayjs(project.date);
+    // get date/time for start of today
+    var today = dayjs().startOf('day');
+
+    // Create row and columns for project
+    var rowEl = $('<tr>');
+    var nameEL = $('<td>').text(project.name);
+    var typeEl = $('<td>').text(project.type);
+    var dateEl = $('<td>').text(projectDate.format('MM/DD/YYYY'));
+
+    // Save the index of the project as a data-* attribute on the button. This
+    // will be used when removing the project from the array.
+    var deleteEl = $(
+      '<td><button class="btn btn-sm btn-delete-project" data-index="' +
+        i +
+        '">X</button></td>'
+    );
+
+    // add class to row by comparing project date to today's date
+    if (projectDate.isBefore(today)) {
+      rowEl.addClass('project-late');
+    } else if (projectDate.isSame(today)) {
+      rowEl.addClass('project-today');
+    }
+
+    // append elements to DOM to display them
+    rowEl.append(nameEL, typeEl, dateEl, deleteEl);
+    projectDisplayEl.append(rowEl);
+  }
 }
 
-// handle project form submission
+// Removes a project from local storage and prints the project data
+function handleDeleteProject() {
+  var projectIndex = parseInt($(this).attr('data-index'));
+  var projects = readProjectsFromStorage();
+  // remove project from the array
+  projects.splice(projectIndex, 1);
+  saveProjectsToStorage(projects);
+
+  // print projects
+  printProjectData();
+}
+
+// Adds a project to local storage and prints the project data
 function handleProjectFormSubmit(event) {
   event.preventDefault();
 
+  // read user input from the form
   var projectName = projectNameInputEl.val().trim();
-  var projectType = projectTypeInputEl.val().trim();
-  var hourlyRate = hourlyRateInputEl.val().trim();
-  var dueDate = dueDateInputEl.val().trim();
+  var projectType = projectTypeInputEl.val(); // don't need to trim select input
+  var projectDate = projectDateInputEl.val(); // yyyy-mm-dd format
 
-  printProjectData(projectName, projectType, hourlyRate, dueDate);
+  var newProject = {
+    name: projectName,
+    type: projectType,
+    date: projectDate,
+  };
 
-  projectFormEl[0].reset();
+  // add project to local storage
+  var projects = readProjectsFromStorage();
+  projects.push(newProject);
+  saveProjectsToStorage(projects);
+
+  // print project data
+  printProjectData();
+
+  // clear the form inputs
+  projectNameInputEl.val('');
+  projectTypeInputEl.val('');
+  projectDateInputEl.val('');
 }
 
 projectFormEl.on('submit', handleProjectFormSubmit);
-projectDisplayEl.on('click', '.delete-project-btn', handleDeleteProject);
-dueDateInputEl.datepicker({ minDate: 1 });
 
+// Use jQuery event delegation to listen for clicks on dynamically added delete
+// buttons.
+projectDisplayEl.on('click', '.btn-delete-project', handleDeleteProject);
+
+displayTime();
 setInterval(displayTime, 1000);
+
+printProjectData();
