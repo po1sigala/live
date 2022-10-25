@@ -12,7 +12,7 @@ This lesson introduces Node.js and the new syntax that comes with ES6. This incl
 
 * Students will be expected to have the latest LTS version of Node.js installed prior to class, but if they don't, be sure to tell them that they can install it using the resources found on the [Node.js installation guide on The Full-Stack Blog](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs). Remind students that it is important to download the recommended LTS or Long Term Support version, since this is the most recent stable release.
 
->* **Important** Because some of the technologies we use in this course like GraphQL and MERN do not work well with Node 18, we will roll back to Node 16. Once these problems have been resolved, using Node v18 will be fine. Follow this [link to our blog on how to install Node.](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
+> **Important**: Because some of the technologies we use in this course like GraphQL and MERN do not work well with Node 18, we will roll back to Node 16. Once these problems have been resolved, using Node v18 will be fine. Follow this [link to our blog on how to install Node.](https://coding-boot-camp.github.io/full-stack/nodejs/how-to-install-nodejs)
 
 * Transitioning from client-side to back-end development can be a little confusing at first. Remind students that Node.js is Chrome's V8 engine running on the machine rather than in the browser, giving us access to things like the file system.
 
