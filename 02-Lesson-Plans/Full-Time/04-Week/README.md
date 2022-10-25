@@ -49,7 +49,7 @@ Refer to the [Node.js installation guide on The Full-Stack Blog](https://coding-
 
 * MacOS use `homebrew` to lock into Node 16. 
 
-* Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/) to lock into Node 16.
+* Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/node-v16.18.0-x64.msi) to download and lock into Node 16.
 
 * Also, remind students to have it installed prior to coming to class!
 

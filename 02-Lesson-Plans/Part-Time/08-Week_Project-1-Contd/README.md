@@ -30,7 +30,7 @@ Review this module's Roadmap in Canvas for detailed information on key topics, l
 
 * MacOS use `homebrew` to lock into Node 16. 
 
-* Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/) to lock into Node 16.
+* Windows use this direct [MSI](https://nodejs.org/download/release/v16.18.0/node-v16.18.0-x64.msi) to download and lock into Node 16.
 
 * Also, make sure students have it installed prior to starting Module 09.
 
