@@ -1083,7 +1083,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * You can find this same `sid` in the cookie that gets stored in the browser. You can view the cookie information by opening Chrome DevTools, clicking the Application tab, and then clicking "storage".
 
-* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Cookies/README.md`.
+* In preparation for the activity, ask TAs to start directing students to the activity instructions found in `18-Stu_Session-Storage/README.md`.
 
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
@@ -1139,7 +1139,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
   * ✔️ `SequelizeStore()`
 
-* Open `18-Stu_Cookies/Solved/server.js` in your IDE and explain the following:
+* Open `18-Stu_Session-Storage/Solved/server.js` in your IDE and explain the following:
 
   * 🔑 To set up cookies for database sessions, we first need to initialize Sequelize with the session store. To do that, we need to install and import `connect-session-sequelize`. The `connect-session-sequelize` library automatically stores the sessions created by `express-session` into the database! See the following code for an example:
 
