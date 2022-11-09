@@ -16,7 +16,7 @@ In today's class, students will continue to practice using Handlebars.js, includ
 
 * Students will need to create the `museum_db` database and seed it during their first activity. They will need to run `npm install`, modify the `.env.EXAMPLE` file, and run `npm start` before every activity.
 
-* **Important**: Activities `15-Ins_Sessions` through `18-Stu_Cookies` are aimed at providing an **introduction** to sessions and cookies as they may encounter them in the workplace. Aim to keep your explanations simple to fit in the alloted timeframe and remind students that on the job when they encounter similar, challenging codebases they will often have to refer to the documentation and do more research on their own.
+* **Important**: Activities `15-Ins_Sessions` through `18-Stu_Session-Storage` are aimed at providing an **introduction** to sessions and cookies as they may encounter them in the workplace. Aim to keep your explanations simple to fit in the alloted timeframe and remind students that on the job when they encounter similar, challenging codebases they will often have to refer to the documentation and do more research on their own.
 
 * Remind students to do a `git pull` of the class repo to have today's activities ready and open in VS Code.
 
