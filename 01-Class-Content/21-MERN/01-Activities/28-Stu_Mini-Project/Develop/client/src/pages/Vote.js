@@ -2,6 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { getMatchup, createVote } from '../utils/api';
 
+// Uncomment import statements below after building queries and mutations
+// import { useQuery, useMutation } from '@apollo/client';
+// import { CREATE_VOTE } from '../utils/mutations';
+// import { QUERY_MATCHUPS } from '../utils/queries';
+
 const Vote = () => {
   const [matchup, setMatchup] = useState({});
   let { id } = useParams();
