@@ -416,7 +416,7 @@ By the end of class, students will be able to do the following:
 
   * Let's take a quick look at the mini-project that we will complete at the end of this module.
 
-* Open `28-Stu_Mini-Project/Solved/index.html` in your browser and open Chrome DevTools to demonstrate simulating a mobile viewport.
+* Open `28-Stu_Mini-Project/Main/index.html` in your browser and open Chrome DevTools to demonstrate simulating a mobile viewport.
 
   * To access the Chrome DevTools, we can press Cmd+Opt+I on macOS or Ctrl+Shift+I on Windows.
 
