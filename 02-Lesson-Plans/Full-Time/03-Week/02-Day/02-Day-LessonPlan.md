@@ -428,7 +428,7 @@ By the end of class students will be able to:
 
 * Welcome students to class.
 
-* Open `28-Stu_Mini-Project/Solved/index.html` in your browser and demonstrate the following:
+* Open `28-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
   * You will work on creating this project tracker after the break, but let's take a sneak peak at some cool features here!
 

@@ -120,7 +120,7 @@ By the end of class, students will be able to:
 
       It is a general utility that can be used for a variety of purposes including asset compilation, scripting, monitoring, and **most notably as the basis for web servers**.
 
-* Navigate to `28-Stu_Mini-Project/Solved/Basic/index.js` and demonstrate the following:
+* Navigate to `28-Stu_Mini-Project/Main/Basic/index.js` and demonstrate the following:
 
   * 🔑 We are viewing the mini-project that we will be able to build by the end of this module. 
 
