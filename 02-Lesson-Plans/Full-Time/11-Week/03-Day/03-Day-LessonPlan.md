@@ -103,7 +103,7 @@ In this class, students will be introduced to complex state management within th
 
 * Welcome students to class.
 
-* Navigate to `28-Stu_Mini-Project/Solved` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
+* Navigate to `28-Stu_Mini-Project/Main` in your command line and run `npm install`, `npm run seed`, and `npm run develop`.
 
 * Open `localhost:3000/` in your browser and demonstrate the following:
 

@@ -63,7 +63,7 @@ By the end of class students will be able to
 
 ### 1. Instructor Demo: Mini Project (5 mins)
 
-* Open `28-Stu_Mini-Project/Solved/index.html` in your browser and demonstrate the following:
+* Open `28-Stu_Mini-Project/Main/index.html` in your browser and demonstrate the following:
 
   * 🔑 We see a header with the title "Project Tracker" with the current time and date. On the left, we see instructions for adding a project to the project tracker.
 
@@ -196,7 +196,7 @@ While you build, remember the following guidelines:
 
   * ✔️ jQuery event delegation
 
-* Open `28-Stu_Mini-Project/Solved/index.html` in your IDE and explain the following: 
+* Open `28-Stu_Mini-Project/Main/index.html` in your IDE and explain the following: 
 
   * We don't have time to review every part of this mini-project; however, we will review the key points.
 
