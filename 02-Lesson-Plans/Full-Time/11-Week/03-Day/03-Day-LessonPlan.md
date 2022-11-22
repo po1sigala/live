@@ -115,6 +115,8 @@ In this class, students will be introduced to complex state management within th
 
   * 🔑 When we click on the `Create Matchups` pages, we navigate to a new page at `localhost:3000/matchup/<id>`. That page shows only the information for our new matchup.
 
+  * 🔑 For this code, the Apollo Client code has been supplied for you. Make sure to ONLY uncomment it when the server-side code is up and running.
+
 * Ask the class the following questions (☝️) and call on students for the answers (🙋):
 
   * ☝️ How would we build this?
