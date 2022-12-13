@@ -28,7 +28,7 @@ mongodb.connect(
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err, client) => {
     db = client.db();
-    db.collection('authorList').deleteMany({});
+    db.collection('numberList').deleteMany({});
     db.collection('numberList').insertMany(data, (err, res) => {
       if (err) {
         return console.log(err);
